@@ -1,0 +1,3 @@
+日志&报告层 Output
+
+里面分别存放的是allure报告、pytest报告、log、和错误截图

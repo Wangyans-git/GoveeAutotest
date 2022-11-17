@@ -1,0 +1,1221 @@
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1656641483078)
++++ b/.idea/vcs.xml	(date 1656641483078)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: GoveeProject/.idea/pythonProject1.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GoveeProject/.idea/pythonProject1.iml b/GoveeProject/.idea/pythonProject1.iml
+new file mode 100644
+--- /dev/null	(date 1656569584150)
++++ b/GoveeProject/.idea/pythonProject1.iml	(date 1656569584150)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: GoveeProject/package_app/AutoApp.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GoveeProject/package_app/AutoApp.py b/GoveeProject/package_app/AutoApp.py
+new file mode 100644
+--- /dev/null	(date 1656585273317)
++++ b/GoveeProject/package_app/AutoApp.py	(date 1656585273317)
+@@ -0,0 +1,241 @@
++import datetime
++import threading
++import time
++import serial
++
++from appium import webdriver
++from selenium.webdriver.common.by import By
++from appium.webdriver.common.touch_action import TouchAction
++
++
++class ExecuteApp(object):
++
++    # def __init__(self, desired_caps, com, dbs, timeout):
++    def __init__(self, desired_caps):
++        self.driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_capabilities=desired_caps)
++        self.driver.implicitly_wait(30)
++        # self.date_all = ''
++        # self.err_count = 0
++        #
++        # self.com = com
++        # self.dbs = dbs
++        # self.timeout = timeout
++        # try:
++        #     self.ser = serial.Serial(self.com,
++        #                              self.dbs,
++        #                              timeout=self.timeout)
++        #     print("*********打开串口成功*********")
++        # except Exception as e:
++        #     print("*********串口异常:{}*********".format(e))
++        #     self.err = -1
++
++    # 配网
++    def network(self):
++        # 添加”+“
++        self.driver.find_element(By.ID, "iv_add").click()
++        time.sleep(2)
++        # 输入要添加的SKU
++        self.driver.find_element(By.ID, "tv_search").click()
++        time.sleep(3)
++        self.driver.find_element(By.ID, "et_search").send_keys("H7131")
++        time.sleep(2)
++        # 点击SKU
++        self.driver.find_element(By.ID, "sku_des").click()
++        # 选择设备
++        time.sleep(8)
++        self.driver.find_elements(By.CLASS_NAME, "android.widget.RelativeLayout")[0].click()
++        time.sleep(2)
++        print("############################")
++        print("等待配对(点击设备开关按钮。)")
++        print("############################")
++        time.sleep(10)
++        # 命名设备
++        self.driver.find_element(By.ID, "done").click()
++        time.sleep(2)
++        # wifi配置
++        self.driver.find_element(By.ID, "et_pwd").clear()
++        self.driver.find_element(By.ID, "et_pwd").send_keys("20170201")
++        self.driver.find_element(By.ID, "send_wifi").click()
++        time.sleep(20)
++
++    # 删除设备
++    def del_device(self):
++        # 点击设备设置按钮
++        TouchAction(self.driver).press(x=1320, y=230).release().perform()  # 通过定位坐标
++        time.sleep(2)
++        self.swipe_down()  # 下滑
++        self.driver.find_element(By.ID, "btn_delete").click()
++        time.sleep(2)
++        self.driver.find_element(By.ID, "btn_done").click()
++        time.sleep(5)
++
++    # app主页
++    def app_home(self):
++        # 进入设备详情页
++        self.driver.find_element(By.ID, "rl_item").click()
++        time.sleep(5)
++
++    # 控制设备详情页头部上半部分功能
++    def auto_app_top(self):
++        # 点击开关
++        self.driver.find_element(By.ID, "iv_switch").click()
++        time.sleep(2)
++        self.driver.find_element(By.ID, "iv_switch").click()
++        time.sleep(2)
++        # 低挡
++        self.driver.find_element(By.ID, "iv_gear_low_bg").click()
++        time.sleep(2)
++        # 中挡
++        self.driver.find_element(By.ID, "iv_gear_mid_bg").click()
++        time.sleep(2)
++        # 高档
++        self.driver.find_element(By.ID, "iv_gear_high_icon").click()
++        time.sleep(2)
++        # 风扇挡
++        self.driver.find_element(By.ID, "iv_fan_icon").click()
++        time.sleep(2)
++        # 自动挡
++        self.driver.find_element(By.ID, "iv_auto_icon").click()
++        time.sleep(2)
++
++    # 控制设备详情页头部下半部分功能
++    def auto_app_down(self):
++        # 摇头
++        self.driver.find_element(By.ID, 'iv_shake_switch').click()
++        time.sleep(2)
++        # 夜灯
++        self.driver.find_element(By.ID, 'iv_light_rgb_switch_ext1').click()
++        time.sleep(2)
++        # 锁
++        self.driver.find_element(By.ID, 'iv_lock_switch').click()
++        time.sleep(2)
++        # 显示
++        self.driver.find_element(By.ID, 'iv_light_indicator_switch').click()
++        time.sleep(2)
++        # 绑定温湿度计
++        self.driver.find_element(By.ID, 'bind_tempe_container').click()
++        time.sleep(2)
++        self.driver.find_element(By.XPATH, "	/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android"
++                                           ".widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/"
++                                           "android.widget.RelativeLayout/android.widget.RelativeLayout/androidx.recyc"
++                                           "lerview.widget.RecyclerView/android.widget.RelativeLayout[2]").click()
++        time.sleep(2)
++        # self.driver.find_element(By.ID,"btn_ok").click()  # 定位该id会导致手机界面下拉设置框
++        # time.sleep(2)
++        TouchAction(self.driver).press(x=1320, y=230).release().perform()  # 通过定位坐标
++        time.sleep(2)
++
++    # 获取手机屏幕宽度
++    def get_size(self):
++        # 获取窗口尺寸
++        size = self.driver.get_window_size()
++        x = size['width']
++        y = size['height']
++        return x, y
++
++    def swipe_down(self):
++        # 向下滑动
++        size = self.get_size()
++        x1 = int(size[0] * 0.5)
++        y1 = int(size[1] * 0.9)
++        y2 = int(size[1] * 0.1)
++        self.driver.swipe(x1, y1, x1, y2, 500)
++
++    def swipe_up(self):
++        # 向上滑动
++        size = self.get_size()
++        x1 = int(size[0] * 0.5)
++        y1 = int(size[1] * 0.1)
++        y2 = int(size[1] * 0.9)
++        self.driver.swipe(x1, y1, x1, y2, 500)
++
++    # # 读取处理数据
++    # def read_date(self):
++    #     while True:
++    #         now_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S----->")
++    #         date = ''
++    #         try:
++    #             date_line = self.ser.readline().decode()
++    #             time.sleep(0.1)
++    #             date += date_line
++    #             # print(date)
++    #             if '55 10 01 00 01 01 68' in date:
++    #                 str_date = str(now_time) + "开机成功."
++    #                 self.date_all += str_date
++    #                 print(str_date)
++    #             elif '55 10 01 00 01 00 67' in date:
++    #                 str_date1 = str(now_time) + "关机成功."
++    #                 self.date_all += str_date1
++    #                 print(str_date1)
++    #             elif '55 10 02 00 01 01 69' in date:
++    #                 str_date2 = str(now_time) + '一档成功.'
++    #                 self.date_all += str_date2
++    #                 print(str_date2)
++    #             elif '55 10 02 00 01 02 6A' in date:
++    #                 str_date3 = str(now_time) + '二档成功.'
++    #                 self.date_all += str_date3
++    #                 print(str_date3)
++    #             elif '55 10 02 00 01 03 6B' in date:
++    #                 str_date4 = str(now_time) + '三档成功.'
++    #                 self.date_all += str_date4
++    #                 print(str_date4)
++    #             elif '55 10 02 00 01 04 6C' in date:
++    #                 str_date5 = str(now_time) + '风扇档成功.'
++    #                 self.date_all += str_date5
++    #                 print(str_date5)
++    #             elif '55 10 03 00 01 01 6A' in date:
++    #                 str_date6 = str(now_time) + '开摇头成功.'
++    #                 self.date_all += str_date6
++    #                 print(str_date6)
++    #             elif '55 10 03 00 01 00 69' in date:
++    #                 str_date7 = str(now_time) + '关摇头成功.'
++    #                 self.date_all += str_date7
++    #                 print(str_date7)
++    #         except Exception as e:
++    #             print("获取数据错误!", e)
++    #             break
++
++    # # 判断错误数据
++    # def date_result(self):
++    #     date = self.date_all.split('.')
++    #     # print(date)
++    #     if len(date) - 1 == 4:
++    #         for j in date:
++    #             # print(j)
++    #             pass  # 存入txt文档
++    #         self.date_all = ''
++    #     else:
++    #         print(str(datetime.datetime.now()) + "有错误")
++    #
++    #         self.date_all = ''
++    #         self.err_count += 1
++    #     return self.err_count
++
++    # # 线程读取数据
++    # def thread_recv(self):
++    #     try:
++    #         thread = threading.Thread(target=self.read_date, daemon=True)
++    #         thread.start()
++    #     except Exception as e:
++    #         print("无法启动线程:{}".format(e))
++
++
++if __name__ == "__main__":
++    desired_caps = {
++        'platformName': 'Android',
++        'platformVersion': '10',
++        'deviceName': "48f8788d",
++        'appPackage': 'com.govee.home',
++        'appActivity': 'com.govee.home.HomeActivity',
++        'noReset': 'true',  # 启动app时不要清除app里原有的数据
++        'automationName': 'Uiautomator2',
++        'adbExecTimeout': '20000'
++    }
++    run = ExecuteApp(desired_caps)
++    # while True:
++    run.network()  # 配网
++    # run.app_home()  # 进入设备详情页（）
++    # run.auto_app_top()  # 控制头部功能
++    # run.swipe_down()  # 向下滑动
++    # run.auto_app_down()  # 控制底部功能
++    # run.del_device()
+Index: GoveeProject/.idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GoveeProject/.idea/modules.xml b/GoveeProject/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1650454167368)
++++ b/GoveeProject/.idea/modules.xml	(date 1650454167368)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/pythonProject1.iml" filepath="$PROJECT_DIR$/.idea/pythonProject1.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: GoveeProject/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GoveeProject/.idea/misc.xml b/GoveeProject/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1650454167386)
++++ b/GoveeProject/.idea/misc.xml	(date 1650454167386)
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10" project-jdk-type="Python SDK" />
++</project>
+\ No newline at end of file
+Index: GoveeProject/package_serial/log.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>GBK
+===================================================================
+diff --git a/GoveeProject/package_serial/log.txt b/GoveeProject/package_serial/log.txt
+new file mode 100644
+--- /dev/null	(date 1656581286552)
++++ b/GoveeProject/package_serial/log.txt	(date 1656581286552)
+@@ -0,0 +1,109 @@
++2022-06-30 17:28:02----->iot_test 01 01
++
++2022-06-30 17:28:02----->
++
++
++2022-06-30 17:28:02----->
++Govee:/$ uart send: 
++
++2022-06-30 17:28:02----->
++
++55 10 01 00 01 01 68 
++
++2022-06-30 17:28:02----->
++
++MCU Recv: 
++
++2022-06-30 17:28:02----->
++AA 10
++
++2022-06-30 17:28:02----->
++cmd :01 
++
++2022-06-30 17:28:02----->
++len :00 01 
++
++2022-06-30 17:28:03----->
++payload: 01 
++
++2022-06-30 17:28:03----->
++chk:BD
++
++2022-06-30 17:28:03----->
++[rtl8720cf_app_handle_io_msg] update dev status: 1
++2022-06-30 17:28:03----->
++
++uart send: 
++
++2022-06-30 17:28:03----->
++
++55 10 F3 00 01 02 5B 
++
++2022-06-30 17:28:03----->
++
++2022-06-30 17:28:04----->iot_test 03 01
++
++2022-06-30 17:28:04----->
++
++
++2022-06-30 17:28:04----->
++Govee:/$ uart send: 
++
++2022-06-30 17:28:04----->
++
++55 10 03 00 01 01 6A 
++
++2022-06-30 17:28:04----->开摇头成功.2022-06-30 17:28:04----->
++
++MCU Recv: 
++
++2022-06-30 17:28:04----->
++AA 10
++
++2022-06-30 17:28:04----->
++cmd :03 
++
++2022-06-30 17:28:05----->
++len :00 01 
++
++2022-06-30 17:28:05----->
++payload: 01 
++
++2022-06-30 17:28:05----->
++chk:BF
++
++2022-06-30 17:28:05----->
++uart send: 
++
++2022-06-30 17:28:05----->
++
++55 10 16 00 00 7B 
++
++2022-06-30 17:28:05----->
++
++MCU Recv: 
++
++2022-06-30 17:28:05----->
++AA 10
++
++2022-06-30 17:28:05----->
++cmd :16 
++
++2022-06-30 17:28:05----->
++len :00 02 
++
++2022-06-30 17:28:05----->
++payload: 1F A4 
++
++2022-06-30 17:28:06----->
++chk:95
++
++2022-06-30 17:28:06----->
++iot_test 03 00
++
++2022-06-30 17:28:06----->
++
++
++2022-06-30 17:28:06----->
++Govee:/$ uart send: 
++
+Index: GoveeProject/.idea/inspectionProfiles/profiles_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GoveeProject/.idea/inspectionProfiles/profiles_settings.xml b/GoveeProject/.idea/inspectionProfiles/profiles_settings.xml
+new file mode 100644
+--- /dev/null	(date 1650454167400)
++++ b/GoveeProject/.idea/inspectionProfiles/profiles_settings.xml	(date 1650454167400)
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <settings>
++    <option name="USE_PROJECT_PROFILE" value="false" />
++    <version value="1.0" />
++  </settings>
++</component>
+\ No newline at end of file
+Index: .idea/PycharmProjects.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/PycharmProjects.iml b/.idea/PycharmProjects.iml
+new file mode 100644
+--- /dev/null	(date 1656569851804)
++++ b/.idea/PycharmProjects.iml	(date 1656569851804)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: GoveeProject/.idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>GBK
+===================================================================
+diff --git a/GoveeProject/.idea/.gitignore b/GoveeProject/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1650454167510)
++++ b/GoveeProject/.idea/.gitignore	(date 1650454167510)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: GoveeProject/package_ota/OTA_Scripy.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GoveeProject/package_ota/OTA_Scripy.py b/GoveeProject/package_ota/OTA_Scripy.py
+new file mode 100644
+--- /dev/null	(date 1651128627037)
++++ b/GoveeProject/package_ota/OTA_Scripy.py	(date 1651128627037)
+@@ -0,0 +1,434 @@
++from selenium import webdriver
++from selenium.webdriver.common.by import By
++import time
++
++
++class ExecuteOta(object):
++
++    def __init__(self):
++        self.driver = webdriver.Chrome()
++        self.driver.maximize_window()
++        self.driver.implicitly_wait(300)
++
++        self.driver.get(url="https://app.slack.com/workspace-signin?redir=%2Fgantry%2Fauth%3Fapp%3Dclient%26lc%3D163896"
++                            "8525%26return_to%3D%252Fclient%252FT4MJC3XG8%252FC4MJC421W%26teams%3D")
++
++        self.driver.find_element(By.ID, "domain").send_keys("skybellhq.slack.com")
++        self.driver.find_element(By.XPATH, "//*[text()='继续']").click()
++
++        self.driver.find_element(By.ID, "email").send_keys("charles.chan@d-3.com.hk")
++        self.driver.find_element(By.ID, "password").send_keys("d3d3d3d3")
++        self.driver.find_element(By.ID, "signin_btn").click()
++        time.sleep(10)
++
++        # 记录第一台设备FW A->B的次数
++        self.device_one_a = 0
++        self.device_one_b = 0
++        # 记录第二台设备FW A->B的次数
++        self.device_two_a = 0
++        self.device_two_b = 0
++        # 记录第三台设备FW A->B的次数
++        self.device_three_a = 0
++        self.device_three_b = 0
++        # 记录第四台设备FW A->B的次数
++        self.device_four_a = 0
++        self.device_four_b = 0
++        # 记录第四台设备FW A->B的次数
++        self.device_five_a = 0
++        self.device_five_b = 0
++
++        print("###############录入需要升级的设备信息###############")
++        # 设备1
++        self.device_sn_one = input("输入要升级的设备SN①:")
++        self.device_id_one = input("输入要升级的设备id①:")
++        # 设备2
++        self.device_sn_two = input("输入要升级的设备SN②:")
++        self.device_id_two = input("输入要升级的设备id②:")
++        # 设备3
++        self.device_sn_three = input("输入要升级的设备SN③:")
++        self.device_id_three = input("输入要升级的设备id③:")
++        # 设备4
++        self.device_sn_four = input("输入要升级的设备SN④:")
++        self.device_id_four = input("输入要升级的设备id④:")
++        # 设备5
++        self.device_sn_five = input("输入要升级的设备SN⑤:")
++        self.device_id_five = input("输入要升级的设备id⑤:")
++
++        # 需要升级的版本id   A->B
++        print("###############录入需要升级的版本信息###############")
++        self.update_version_a = input("输入要升级的版本号 A：")
++        self.update_version_id_a = input("输入要升级的版本id A：")
++        self.update_version_b = input("输入要升级的版本号 B：")
++        self.update_version_id_b = input("输入要升级的版本id B：")
++
++    def run_trim2(self):
++
++        """
++        v8087 60c8af03e1b99f3f33bdff86
++        v8088 612645909d200bf8e4ab2d73
++
++        """
++
++        # 执行A版本
++        while True:
++            # 升级2台
++            # update_device_list = [self.device_id_one, self.device_id_two]
++            # 升级3台
++            # update_device_list = [self.device_id_one, self.device_id_two, self.device_id_three]
++            # 升级5台
++            update_device_list = [self.device_id_one, self.device_id_two, self.device_id_three, self.device_id_four,
++                                  self.device_id_five]
++
++            # 第一台机器one，执行A版本
++            self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++                "device " + update_device_list[0] + " firmware " + self.update_version_id_a)
++            self.driver.find_element(By.XPATH,
++                                     '//span[contains(@class,"c-wysiwyg_container__send_button--w'
++                                     'ith_options")]').click()
++            time.sleep(10)
++            # 检查是否已经是A版本
++            for update_check in self.driver.find_elements(By.XPATH,
++                                                          '//div[@class="c-virtual_list__item"][last()]//span'
++                                                          '[@class="c-message_kit__text"]'):
++                # 如果是A版本,执行B版本
++
++                if "No upgrade needed" in update_check.text:
++                    self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++                        "device " + update_device_list[0] + " firmware " + self.update_version_id_b)
++                    self.driver.find_element(By.XPATH,
++                                             '//span[contains(@class,"c-wysiwyg_container__send_button'
++                                             '--with_options")]').click()
++                    # 等待升级
++                    print("------------" + self.device_sn_one + "正在升级" + self.update_version_b + "...------------")
++                    time.sleep(420)
++                    # 检查是否已经是B
++                    self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++                        "device " + update_device_list[0] + " firmware " + self.update_version_id_b)
++                    self.driver.find_element(By.XPATH,
++                                             '//span[contains(@class,"c-wysiwyg_container__send_'
++                                             'button--with_options")]').click()
++                    time.sleep(30)
++                    # 如果是已经是B版本,则B+1
++                    for count in self.driver.find_elements(By.XPATH,
++                                                           '//div[@class="c-virtual_list__item"][last()]//span'
++                                                           '[@class="c-message_kit__text"]'):
++                        """
++                        Requesting firmware upgrade for device SN A3BB304556. Going from 8088 to 8087...
++                        """
++
++                        print(count.text)
++                        if "No upgrade needed. Version: " + self.update_version_b in count.text:
++                            self.device_one_b += 1
++                            print("device_one_b += 1")
++
++                    print(self.device_sn_one + "已经升级" + self.update_version_b + ": " + str(self.device_one_b) + "次")
++                    time.sleep(30)
++                # 报503
++                elif "Got 5.03 status code" in update_check.text:
++                    print(self.device_sn_one + " Got 5.03 status code...")
++                    time.sleep(60)
++                # 否则升级A
++                else:
++                    # 等待升级
++                    print("------------" + self.device_sn_one + "正在升级" + self.update_version_a + "...------------")
++                    time.sleep(420)
++                    # 检查是否已经是A
++                    self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++                        "device " + update_device_list[0] + " firmware " + self.update_version_id_a)
++                    self.driver.find_element(By.XPATH,
++                                             '//span[contains(@class,"c-wysiwyg_container__send_button--with_opti'
++                                             'ons")]').click()
++                    time.sleep(30)
++                    # 如果是已经是A版本,则A+1
++
++                    for count in self.driver.find_elements(By.XPATH,
++                                                           '//div[@class="c-virtual_list__item"][last()]//span'
++                                                           '[@class="c-message_kit__text"]'):
++
++                        print(count.text)
++                        if "No upgrade needed. Version: " + self.update_version_a in count.text:
++                            self.device_one_a += 1
++                            print("device_one_a += 1")
++
++                    print(self.device_sn_one + "已经升级" + self.update_version_a + ": " + str(self.device_one_a) + "次")
++                    time.sleep(30)
++
++            # 第二台机器one，执行A版本
++            self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++                "device " + update_device_list[1] + " firmware " + self.update_version_id_a)
++            self.driver.find_element(By.XPATH,
++                                     '//span[contains(@class,"c-wysiwyg_container__send_butto'
++                                     'n--with_options")]').click()
++            time.sleep(10)
++            # 检查是否已经是A
++            for update_check in self.driver.find_elements(By.XPATH,
++                                                          '//div[@class="c-virtual_list__item"][last()]//span[@c'
++                                                          'lass="c-message_kit__text"]'):
++                # 如果是A,执行B
++                if "No upgrade needed. Version" in update_check.text:
++                    self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++                        "device " + update_device_list[1] + " firmware " + self.update_version_id_b)
++                    self.driver.find_element(By.XPATH,
++                                             '//span[contains(@class,"c-wysiwyg_container__send_button--with_opti'
++                                             'ons")]').click()
++                    # 等待升级
++                    print("------------" + self.device_sn_two + "正在升级" + self.update_version_b + "...------------")
++                    time.sleep(420)
++                    self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++                        "device " + update_device_list[1] + " firmware " + self.update_version_id_b)
++                    self.driver.find_element(By.XPATH,
++                                             '//span[contains(@class,"c-wysiwyg_container__send_button--with_optio'
++                                             'ns")]').click()
++                    time.sleep(30)
++
++                    for count in self.driver.find_elements(By.XPATH,
++                                                           '//div[@class="c-virtual_list__item"][last()]//span'
++                                                           '[@class="c-message_kit__text"]'):
++                        print(count.text)
++                        if "No upgrade needed. Version: " + self.update_version_b in count.text:
++                            self.device_two_b += 1
++                            print("device_two_b += 1")
++
++                    print(self.device_sn_two + "已经升级" + self.update_version_b + ": " + str(self.device_two_b) + "次")
++                    time.sleep(30)
++                # 报503
++                elif "Got 5.03 status code" in update_check.text:
++                    print(self.device_sn_two + " Got 5.03 status code...")
++                    time.sleep(60)
++                # 否则升级4089
++                else:
++                    # 等待升级
++                    print("------------" + self.device_sn_two + "正在升级" + self.update_version_a + "...------------")
++                    time.sleep(420)
++
++                    self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++                        "device " + update_device_list[1] + " firmware " + self.update_version_id_a)
++                    self.driver.find_element(By.XPATH,
++                                             '//span[contains(@class,"c-wysiwyg_container__send_button--with_opti'
++                                             'ons")]').click()
++                    time.sleep(30)
++                    for count in self.driver.find_elements(By.XPATH,
++                                                           '//div[@class="c-virtual_list__item"][last()]//sp'
++                                                           'an[@class="c-message_kit__text"]'):
++                        print(count.text)
++                        if "No upgrade needed. Version: " + self.update_version_a in count.text:
++                            self.device_two_a += 1
++                            print("device_two_a += 1")
++
++                    print(self.device_sn_two + "已经升级" + self.update_version_a + ": " + str(self.device_two_a) + "次")
++                    time.sleep(30)
++
++            # 第三台机器one，执行A版本
++            # self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++            #     "device " + update_device_list[2] + " firmware " + self.update_version_id_a)
++            # self.driver.find_element(By.XPATH,
++            #                          '//span[contains(@class,"c-wysiwyg_container__send_butto'
++            #                          'n--with_options")]').click()
++            # time.sleep(10)
++            # # 检查是否已经是A
++            # for update_check in self.driver.find_elements(By.XPATH,
++            #                                               '//div[@class="c-virtual_list__item"][last()]//span[@c'
++            #                                               'lass="c-message_kit__text"]'):
++            #     # 如果是A,执行B
++            #     if "No upgrade needed. Version" in update_check.text:
++            #         self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++            #             "device " + update_device_list[2] + " firmware " + self.update_version_id_b)
++            #         self.driver.find_element(By.XPATH,
++            #                                  '//span[contains(@class,"c-wysiwyg_container__send_button--with_opti'
++            #                                  'ons")]').click()
++            #         # 等待升级
++            #         print(
++            #             "------------" + self.device_sn_three + "正在升级" + self.update_version_b + "...------------")
++            #         time.sleep(360)
++            #         self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++            #             "device " + update_device_list[2] + " firmware " + self.update_version_id_b)
++            #         self.driver.find_element(By.XPATH,
++            #                                  '//span[contains(@class,"c-wysiwyg_container__send_button--with_optio'
++            #                                  'ns")]').click()
++            #         time.sleep(30)
++            #
++            #         for count in self.driver.find_elements(By.XPATH,
++            #                                                '//div[@class="c-virtual_list__item"][last()]//span'
++            #                                                '[@class="c-message_kit__text"]'):
++            #             # print(count.text)
++            #             if "No upgrade needed. Version: " + self.update_version_b in count.text:
++            #                 self.device_three_b += 1
++            #                 # print("device_two_b += 1")
++            #
++            #         print(self.device_sn_three + "已经升级" + self.update_version_b + ": " + str(
++            #             self.device_three_b) + "次")
++            #         time.sleep(30)
++            #     # 报503
++            #     elif "Got 5.03 status code" in update_check.text:
++            #         print(self.device_sn_three + " Got 5.03 status code...")
++            #         time.sleep(120)
++            #     # 否则升级4089
++            #     else:
++            #         # 等待升级
++            #         print(
++            #             "------------" + self.device_sn_three + "正在升级" + self.update_version_a + "...------------")
++            #         time.sleep(360)
++            #
++            #         self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++            #             "device " + update_device_list[2] + " firmware " + self.update_version_id_a)
++            #         self.driver.find_element(By.XPATH,
++            #                                  '//span[contains(@class,"c-wysiwyg_container__send_button--with_opti'
++            #                                  'ons")]').click()
++            #         time.sleep(30)
++            #         for count in self.driver.find_elements(By.XPATH,
++            #                                                '//div[@class="c-virtual_list__item"][last()]//sp'
++            #                                                'an[@class="c-message_kit__text"]'):
++            #             # print(count.text)
++            #             if "No upgrade needed. Version: " + self.update_version_a in count.text:
++            #                 self.device_three_a += 1
++            #                 # print("device_two_a += 1")
++            #
++            #         print(self.device_sn_three + "已经升级" + self.update_version_a + ": " + str(
++            #             self.device_three_a) + "次")
++            #         time.sleep(30)
++
++            """
++                升级五台可取消注释下面代码
++            """
++            # # 第四台机器one，执行A版本
++            # self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++            #     "device " + update_device_list[3] + " firmware " + self.update_version_id_a)
++            # self.driver.find_element(By.XPATH,
++            #                          '//span[contains(@class,"c-wysiwyg_container__send_butto'
++            #                          'n--with_options")]').click()
++            # time.sleep(10)
++            # # 检查是否已经是A
++            # for update_check in self.driver.find_elements(By.XPATH,
++            #                                               '//div[@class="c-virtual_list__item"][last()]//span[@c'
++            #                                               'lass="c-message_kit__text"]'):
++            #     # 如果是A,执行B
++            #     if "No upgrade needed. Version" in update_check.text:
++            #         self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++            #             "device " + update_device_list[3] + " firmware " + self.update_version_id_b)
++            #         self.driver.find_element(By.XPATH,
++            #                                  '//span[contains(@class,"c-wysiwyg_container__send_button--with_opti'
++            #                                  'ons")]').click()
++            #         # 等待升级
++            #         print(
++            #             "------------" + self.device_sn_four + "正在升级" + self.update_version_b + "...------------")
++            #         time.sleep(360)
++            #         self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++            #             "device " + update_device_list[3] + " firmware " + self.update_version_id_b)
++            #         self.driver.find_element(By.XPATH,
++            #                                  '//span[contains(@class,"c-wysiwyg_container__send_button--with_optio'
++            #                                  'ns")]').click()
++            #         time.sleep(30)
++            #
++            #         for count in self.driver.find_elements(By.XPATH,
++            #                                                '//div[@class="c-virtual_list__item"][last()]//span'
++            #                                                '[@class="c-message_kit__text"]'):
++            #             # print(count.text)
++            #             if "No upgrade needed. Version: " + self.update_version_b in count.text:
++            #                 self.device_four_b += 1
++            #                 # print("device_two_b += 1")
++            #
++            #         print(self.device_sn_four + "已经升级" + self.update_version_b + ": " + str(
++            #             self.device_four_b) + "次")
++            #         time.sleep(30)
++            #     # 报503
++            #     elif "Got 5.03 status code" in update_check.text:
++            #         print(self.device_sn_four + " Got 5.03 status code...")
++            #         time.sleep(120)
++            #     # 否则升级4089
++            #     else:
++            #         # 等待升级
++            #         print(
++            #             "------------" + self.device_sn_four + "正在升级" + self.update_version_a + "...------------")
++            #         time.sleep(360)
++            #
++            #         self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++            #             "device " + update_device_list[3] + " firmware " + self.update_version_id_a)
++            #         self.driver.find_element(By.XPATH,
++            #                                  '//span[contains(@class,"c-wysiwyg_container__send_button--with_opti'
++            #                                  'ons")]').click()
++            #         time.sleep(30)
++            #         for count in self.driver.find_elements(By.XPATH,
++            #                                                '//div[@class="c-virtual_list__item"][last()]//sp'
++            #                                                'an[@class="c-message_kit__text"]'):
++            #             # print(count.text)
++            #             if "No upgrade needed. Version: " + self.update_version_a in count.text:
++            #                 self.device_four_a += 1
++            #                 # print("device_two_a += 1")
++            #
++            #         print(self.device_sn_four + "已经升级" + self.update_version_a + ": " + str(
++            #             self.device_four_a) + "次")
++            #         time.sleep(30)
++            #
++            # # 第五台机器one，执行A版本
++            # self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++            #     "device " + update_device_list[4] + " firmware " + self.update_version_id_a)
++            # self.driver.find_element(By.XPATH,
++            #                          '//span[contains(@class,"c-wysiwyg_container__send_butto'
++            #                          'n--with_options")]').click()
++            # time.sleep(10)
++            # # 检查是否已经是A
++            # for update_check in self.driver.find_elements(By.XPATH,
++            #                                               '//div[@class="c-virtual_list__item"][last()]//span[@c'
++            #                                               'lass="c-message_kit__text"]'):
++            #     # 如果是A,执行B
++            #     if "No upgrade needed. Version" in update_check.text:
++            #         self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++            #             "device " + update_device_list[4] + " firmware " + self.update_version_id_b)
++            #         self.driver.find_element(By.XPATH,
++            #                                  '//span[contains(@class,"c-wysiwyg_container__send_button--with_opti'
++            #                                  'ons")]').click()
++            #         # 等待升级
++            #         print(
++            #             "------------" + self.device_sn_five + "正在升级" + self.update_version_b + "...------------")
++            #         time.sleep(360)
++            #         self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++            #             "device " + update_device_list[4] + " firmware " + self.update_version_id_b)
++            #         self.driver.find_element(By.XPATH,
++            #                                  '//span[contains(@class,"c-wysiwyg_container__send_button--with_optio'
++            #                                  'ns")]').click()
++            #         time.sleep(30)
++            #
++            #         for count in self.driver.find_elements(By.XPATH,
++            #                                                '//div[@class="c-virtual_list__item"][last()]//span'
++            #                                                '[@class="c-message_kit__text"]'):
++            #             # print(count.text)
++            #             if "No upgrade needed. Version: " + self.update_version_b in count.text:
++            #                 self.device_five_b += 1
++            #                 # print("device_two_b += 1")
++            #
++            #         print(self.device_sn_five + "已经升级" + self.update_version_b + ": " + str(
++            #             self.device_five_b) + "次")
++            #         time.sleep(30)
++            #     # 报503
++            #     elif "Got 5.03 status code" in update_check.text:
++            #         print(self.device_sn_five + " Got 5.03 status code...")
++            #         time.sleep(120)
++            #     # 否则升级4089
++            #     else:
++            #         # 等待升级
++            #         print(
++            #             "------------" + self.device_sn_five + "正在升级" + self.update_version_a + "...------------")
++            #         time.sleep(360)
++            #
++            #         self.driver.find_element(By.XPATH, '//div[contains(@class,"ql-editor")]').send_keys(
++            #             "device " + update_device_list[4] + " firmware " + self.update_version_id_a)
++            #         self.driver.find_element(By.XPATH,
++            #                                  '//span[contains(@class,"c-wysiwyg_container__send_button--with_opti'
++            #                                  'ons")]').click()
++            #         time.sleep(30)
++            #         for count in self.driver.find_elements(By.XPATH,
++            #                                                '//div[@class="c-virtual_list__item"][last()]//sp'
++            #                                                'an[@class="c-message_kit__text"]'):
++            #             # print(count.text)
++            #             if "No upgrade needed. Version: " + self.update_version_a in count.text:
++            #                 self.device_five_a += 1
++            #                 # print("device_two_a += 1")
++            #
++            #         print(self.device_sn_five + "已经升级" + self.update_version_a + ": " + str(
++            #             self.device_five_a) + "次")
++            #         time.sleep(30)
++
++
++run = ExecuteOta()
++while True:
++    run.run_trim2()
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1656569851819)
++++ b/.idea/modules.xml	(date 1656569851819)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/PycharmProjects.iml" filepath="$PROJECT_DIR$/.idea/PycharmProjects.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1656569851901)
++++ b/.idea/misc.xml	(date 1656569851901)
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10" project-jdk-type="Python SDK" />
++</project>
+\ No newline at end of file
+Index: GoveeProject/main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>GBK
+===================================================================
+diff --git a/GoveeProject/main.py b/GoveeProject/main.py
+new file mode 100644
+--- /dev/null	(date 1650454152820)
++++ b/GoveeProject/main.py	(date 1650454152820)
+@@ -0,0 +1,16 @@
++# This is a sample Python script.
++
++# Press Shift+F10 to execute it or replace it with your code.
++# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
++
++
++def print_hi(name):
++    # Use a breakpoint in the code line below to debug your script.
++    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
++
++
++# Press the green button in the gutter to run the script.
++if __name__ == '__main__':
++    print_hi('PyCharm')
++
++# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+Index: .idea/inspectionProfiles/profiles_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+new file mode 100644
+--- /dev/null	(date 1656569851979)
++++ b/.idea/inspectionProfiles/profiles_settings.xml	(date 1656569851979)
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <settings>
++    <option name="USE_PROJECT_PROFILE" value="false" />
++    <version value="1.0" />
++  </settings>
++</component>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>GBK
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1656569852120)
++++ b/.idea/.gitignore	(date 1656569852120)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+new file mode 100644
+--- /dev/null	(date 1656570042334)
++++ b/.idea/encodings.xml	(date 1656570042334)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Encoding">
++    <file url="PROJECT" charset="GBK" />
++  </component>
++</project>
+\ No newline at end of file
+Index: GoveeProject/.idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GoveeProject/.idea/encodings.xml b/GoveeProject/.idea/encodings.xml
+new file mode 100644
+--- /dev/null	(date 1656562267182)
++++ b/GoveeProject/.idea/encodings.xml	(date 1656562267182)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/log.txt" charset="GBK" />
++  </component>
++</project>
+\ No newline at end of file
+Index: GoveeProject/package_serial/SerialTest.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GoveeProject/package_serial/SerialTest.py b/GoveeProject/package_serial/SerialTest.py
+new file mode 100644
+--- /dev/null	(date 1656581300617)
++++ b/GoveeProject/package_serial/SerialTest.py	(date 1656581300617)
+@@ -0,0 +1,144 @@
++import serial
++import threading
++import time
++import datetime
++
++
++class SerialAuto(object):
++
++    def __init__(self, com, dbs, timeout):
++        self.err = 0
++        self.com = com
++        self.dbs = dbs
++        self.timeout = timeout
++        self.err_date = ''  # 做错误判断的数据
++        self.txt_date = ''  # 写入TXT的数据
++        self.err_count = 0  # 记录错误次数
++        try:
++            self.ser = serial.Serial(self.com,
++                                     self.dbs,
++                                     timeout=self.timeout)
++            print("*********打开串口成功*********")
++        except Exception as e:
++            print("*********串口异常:{}*********".format(e))
++            self.err = -1
++
++    # 写入数据
++    def write_date(self, write_itme):
++        self.ser.write(write_itme.encode())
++
++    # 读取处理数据
++    def read_date(self, check_date):
++        while True:
++            now_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S----->")
++            is_success_date = ''  # 判断是否执行成功的临时数据
++            try:
++                date_line = self.ser.readline().decode()
++                time.sleep(0.1)
++                is_success_date += date_line
++                self.txt_date += str(now_time) + date_line  # 所有写入到txt文档
++                SerialAuto.write_txt(self.txt_date)
++                if check_date[0] in is_success_date:
++                    str_date = str(now_time) + "开机成功."
++                    self.err_date += str_date
++                    self.txt_date += str_date
++                    print(str_date)
++                elif check_date[1] in is_success_date:
++                    str_date1 = str(now_time) + "关机成功."
++                    self.err_date += str_date1
++                    self.txt_date += str_date1
++                    print(str_date1)
++                elif check_date[2] in is_success_date:
++                    str_date2 = str(now_time) + '一档成功.'
++                    self.err_date += str_date2
++                    self.txt_date += str_date2
++                    print(str_date2)
++                elif check_date[3] in is_success_date:
++                    str_date3 = str(now_time) + '二档成功.'
++                    self.err_date += str_date3
++                    self.txt_date += str_date3
++                    print(str_date3)
++                elif check_date[4] in is_success_date:
++                    str_date4 = str(now_time) + '三档成功.'
++                    self.err_date += str_date4
++                    self.txt_date += str_date4
++                    print(str_date4)
++                elif check_date[5] in is_success_date:
++                    str_date5 = str(now_time) + '开摇头成功.'
++                    self.err_date += str_date5
++                    self.txt_date += str_date5
++                    print(str_date5)
++                elif check_date[6] in is_success_date:
++                    str_date6 = str(now_time) + '关摇头成功.'
++                    self.err_date += str_date6
++                    self.txt_date += str_date6
++                    print(str_date6)
++            except Exception as e:
++                print("获取数据错误!", e)
++                break
++
++    # 判断错误数据
++    def date_result(self, n):
++        date = self.err_date.split('.')
++        if len(date) - 1 == len(n):  # 因为split分隔后会多一段数据，所以-1
++            for j in date:
++                # print(j)
++                pass  # 存入txt文档
++            self.err_date = ''
++        elif len(date) == 1:
++            pass
++        else:
++            err_ = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S前的一次执行中有错误！！！"))
++            self.txt_date += err_
++            SerialAuto.write_txt(self.txt_date)
++            print(err_)
++            self.err_date = ''
++            self.err_count += 1
++        return self.err_count
++
++    # 数据写入txt文档
++    @staticmethod
++    def write_txt(t):
++        result = str(t)
++        try:
++            with open('log.txt', 'w') as file_handle:
++                file_handle.write(result)
++        except Exception as e:
++            print("文件读写出错：", e)
++
++    # 线程读取数据
++    def thread_recv(self, d):
++        try:
++            thread = threading.Thread(target=self.read_date, args=(d,), daemon=True)
++            thread.start()
++        except Exception as e:
++            print("无法启动线程:{}".format(e))
++
++
++if __name__ == '__main__':
++    program = SerialAuto('com7', 115200, 0.5)
++    m = 0  # 统计测试次数
++    check_dates = ['55 10 01 00 01 01 68', '55 10 01 00 01 00 67', '55 10 02 00 01 01 69', '55 10 02 00 01 02 6A',
++                   '55 10 02 00 01 03 6B', '55 10 03 00 01 01 6A', '55 10 03 00 01 00 69']
++    # 如果
++    if program.err == 0:
++        print("初始化成功...")
++        test_count = int(input("输入需要测试的次数："))  # 测试的次数
++        print("*********开启读取数据*********\r")
++        program.thread_recv(check_dates)
++        send_list = ['iot_test 01 01\r',  # 开机
++                     'iot_test 03 01\r', 'iot_test 03 00\r',  # 摇头
++                     'iot_test 02 01\r', 'iot_test 02 02\r', 'iot_test 02 03\r',  # 档位
++                     'iot_test 01 00\r']  # 关机
++        while True:
++            print("========第{}次测试开始========".format(m + 1))
++            for i in range(len(send_list)):
++                program.write_date(send_list[i])  # 写入数据
++                time.sleep(2)
++            print("========第{}次测试完成========".format(m + 1))
++            program.date_result(send_list)
++            m += 1
++            if m == test_count:
++                print("所有测试完成,一共测试了{}次".format(m))
++                print("*********出现了{}次错误*********".format(program.date_result(send_list)))
++                break
+diff --git a/GoveeProject/package_app/__init__.py b/GoveeProject/package_app/__init__.py
+new file mode 100644
+diff --git a/GoveeProject/package_serial/__init__.py b/GoveeProject/package_serial/__init__.py
+new file mode 100644
+diff --git a/GoveeProject/package_pytest/__init__.py b/GoveeProject/package_pytest/__init__.py
+new file mode 100644
+diff --git a/GoveeProject/package_ota/__init__.py b/GoveeProject/package_ota/__init__.py
+new file mode 100644
+diff --git a/GoveeProject/test.py b/GoveeProject/test.py
+new file mode 100644

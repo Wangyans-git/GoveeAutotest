@@ -1,0 +1,5869 @@
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:23:28----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 01 00 01 00 32 00 00 00 
+chk:F8
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:23:31----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 54 17 8D 
+chk:D3
+uart send: 
+55 11 F0 00 01 22 79 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 22 
+chk:CE
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:23:34----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:23:37----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:23:40----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 54 17 8E 
+chk:D4
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:23:43----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:23:46----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+uart send: 
+55 11 F0 00 01 23 7A 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 23 
+chk:CF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:23:49----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 54 17 91 
+chk:D7
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:23:52----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:23:55----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:23:58----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:24:01----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 53 17 98 
+chk:DD
+uart send: 
+55 11 F0 00 01 24 7B 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 24 
+chk:D0
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 013 00
+uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:24:04----->关闭显示
+Govee:/$ MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:24:07----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:24:10----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 54 17 93 
+chk:D9
+iot_test 01 01
+uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:24:14----->开机
+Govee:/$ MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:24:17----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+uart send: 
+55 11 F0 00 01 25 7C 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 25 
+chk:D1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:24:19----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 54 17 9B 
+chk:E1
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:24:22----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:24:25----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:24:28----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 56 17 9E 
+chk:E6
+uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:24:32----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+uart send: 
+55 11 F0 00 01 26 7D 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 26 
+chk:D2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:24:34----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:24:37----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:24:40----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 54 17 9E 
+chk:E4
+iot_test 05 01
+uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:24:43----->开启童锁
+Govee:/$ MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:24:46----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+uart send: 
+55 11 F0 00 01 27 7E 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 27 
+chk:D3
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:24:49----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 56 17 99 
+chk:E1
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:24:52----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:24:55----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:24:59----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 52 17 9E 
+chk:E2
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:25:02----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+uart send: 
+55 11 F0 00 01 28 7F 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 28 
+chk:D4
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:25:04----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:25:07----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:25:10----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 56 17 98 
+chk:E0
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:25:13----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:25:16----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+uart send: 
+55 11 F0 00 01 29 80 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 29 
+chk:D5
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:25:19----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 56 17 A0 
+chk:E8
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:25:22----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:25:25----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:25:28----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 57 17 A7 
+chk:F0
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:25:32----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+uart send: 
+55 11 F0 00 01 2A 81 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 2A 
+chk:D6
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:25:34----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:25:37----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 00
+uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:25:40----->关机
+Govee:/$ MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 56 17 AA 
+chk:F2
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:25:45----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:25:47----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+uart send: 
+55 11 F0 00 01 2B 82 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 2B 
+chk:D7
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:25:49----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 56 17 AC 
+chk:F4
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:25:52----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:25:55----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 09
+uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:25:58----->三档
+Govee:/$ MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 57 17 AE 
+chk:F7
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:26:02----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+uart send: 
+55 11 F0 00 01 2C 83 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 2C 
+chk:D8
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:26:04----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:26:07----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:26:10----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 59 17 B2 
+chk:FD
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:26:13----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:26:16----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+uart send: 
+55 11 F0 00 01 2D 84 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 2D 
+chk:D9
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:26:19----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 57 17 A8 
+chk:F1
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:26:22----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:26:25----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:26:29----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5A 17 A9 
+chk:F5
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:26:32----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+uart send: 
+55 11 F0 00 01 2E 85 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 2E 
+chk:DA
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:26:34----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:26:37----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 05
+uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:26:40----->二档
+Govee:/$ MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5A 17 E5 
+chk:31
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:26:43----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:26:46----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+uart send: 
+55 11 F0 00 01 2F 86 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 2F 
+chk:DB
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:26:49----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5A 17 B9 
+chk:05
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:26:52----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:26:55----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:26:58----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 59 17 B5 
+chk:00
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:27:02----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+uart send: 
+55 11 F0 00 01 30 87 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 30 
+chk:DC
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:27:04----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:27:07----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:27:10----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5C 17 B7 
+chk:05
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:1
+iot_test 01 01
+uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:27:15----->开机
+Govee:/$ MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:27:17----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+uart send: 
+55 11 F0 00 01 31 88 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 31 
+chk:DD
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:27:19----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5B 17 B7 
+chk:04
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:27:22----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:27:25----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:27:28----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5A 17 B9 
+chk:05
+iot_test 03 01
+uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:27:32----->开启热雾
+Govee:/$ MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+uart send: 
+55 11 F0 00 01 32 89 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 32 
+chk:DE
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:27:34----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:27:37----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:27:40----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5B 17 BF 
+chk:0C
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:27:43----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:27:46----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+uart send: 
+55 11 F0 00 01 33 8A 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 33 
+chk:DF
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:1
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:27:49----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5D 17 BE 
+chk:0D
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:27:52----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:27:55----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:27:59----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5D 17 C3 
+chk:12
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:28:02----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+uart send: 
+55 11 F0 00 01 34 8B 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 34 
+chk:E0
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 02 03
+uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:28:04----->自动挡
+Govee:/$ MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:28:07----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:28:10----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5A 17 C0 
+chk:0C
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:28:13----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:28:16----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+uart send: 
+55 11 F0 00 01 35 8C 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 35 
+chk:E1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:28:19----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5D 17 BC 
+chk:0B
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:28:22----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 06 00
+uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:28:25----->关闭夜灯
+Govee:/$ color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:28:28----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5C 17 BB 
+chk:09
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:28:32----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+uart send: 
+55 11 F0 00 01 36 8D 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 36 
+chk:E2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:28:34----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:28:37----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:28:40----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5D 17 BD 
+chk:0C
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:28:45----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:28:47----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+uart send: 
+55 11 F0 00 01 37 8E 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 37 
+chk:E3
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:28:49----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5B 17 BB 
+chk:08
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:2
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:28:52----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:28:55----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:28:58----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5D 17 B9 
+chk:08
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:29:02----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+uart send: 
+55 11 F0 00 01 38 8F 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 38 
+chk:E4
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:29:04----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:29:07----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:29:10----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5E 17 B7 
+chk:07
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:29:13----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:29:16----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+uart send: 
+55 11 F0 00 01 39 90 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 39 
+chk:E5
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:29:19----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5E 17 AC 
+chk:FC
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:29:22----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:29:25----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 01
+uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:29:29----->开机
+Govee:/$ MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 5F 17 A7 
+chk:F8
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:29:32----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+uart send: 
+55 11 F0 00 01 3A 91 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 3A 
+chk:E6
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:29:34----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 01
+uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:29:37----->一档
+Govee:/$ MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 05
+uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:29:40----->二档
+Govee:/$ MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 61 17 A2 
+chk:F5
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 09
+uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:29:44----->三档
+Govee:/$ MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:29:47----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+uart send: 
+55 11 F0 00 01 3B 92 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 3B 
+chk:E7
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:29:50----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 62 17 9A 
+chk:EE
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:29:53----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:29:56----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:29:59----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 65 17 94 
+chk:EB
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:30:02----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+uart send: 
+55 11 F0 00 01 3C 93 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 3C 
+chk:E8
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:30:05----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:30:08----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:30:11----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 62 17 96 
+chk:EA
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 01
+uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:30:15----->开机
+Govee:/$ MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:30:17----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+uart send: 
+55 11 F0 00 01 3D 94 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 3D 
+chk:E9
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:30:20----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 62 17 95 
+chk:E9
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:30:23----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:30:26----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:1
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:30:29----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 63 17 95 
+chk:EA
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:30:32----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+uart send: 
+55 11 F0 00 01 3E 95 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 3E 
+chk:EA
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:30:35----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:30:38----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:30:41----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 64 17 8E 
+chk:E4
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:30:44----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:30:47----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+uart send: 
+55 11 F0 00 01 3F 96 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 3F 
+chk:EB
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:30:50----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 64 17 8E 
+chk:E4
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:30:53----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:30:56----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:31:00----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 66 17 93 
+chk:EB
+iot_test 02 01
+uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:31:03----->手动挡
+Govee:/$ MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+uart send: 
+55 11 F0 00 01 40 97 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 40 
+chk:EC
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:31:05----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:31:08----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:31:11----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 65 17 94 
+chk:EB
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:31:14----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:31:17----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+uart send: 
+55 11 F0 00 01 41 98 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 41 
+chk:ED
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:31:20----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 67 17 9B 
+chk:F4
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:31:23----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:31:26----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:31:29----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 68 17 9F 
+chk:F9
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:31:32----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+uart send: 
+55 11 F0 00 01 42 99 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 42 
+chk:EE
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 013 00
+uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:31:35----->关闭显示
+Govee:/$ MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:31:38----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:2
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:31:41----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 67 17 9F 
+chk:F8
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:31:46----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+[HAL_Flash_WriteData] flash_addr: 0x1ef000, len: 8
+iot_test 02 01
+uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:31:48----->手动挡
+Govee:/$ MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+uart send: 
+55 11 F0 00 01 43 9A 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 43 
+chk:EF
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:31:50----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 68 17 9D 
+chk:F7
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:31:53----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 05
+uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:31:56----->二档
+Govee:/$ MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:31:59----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 69 17 9F 
+chk:FA
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:32:02----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+uart send: 
+55 11 F0 00 01 44 9B 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 44 
+chk:F0
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:32:05----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:32:08----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:32:11----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 6D 17 A1 
+chk:00
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:32:14----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:32:17----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+uart send: 
+55 11 F0 00 01 45 9C 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 45 
+chk:F1
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:32:20----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 69 17 A5 
+chk:00
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:32:23----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:32:26----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:32:30----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:1
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 6C 17 A3 
+chk:01
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:32:34----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+uart send: 
+55 11 F0 00 01 46 9D 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 46 
+chk:F2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 02 03
+uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:32:35----->自动挡
+Govee:/$ MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:32:38----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:32:41----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 6D 17 A5 
+chk:04
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:32:44----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:32:47----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+uart send: 
+55 11 F0 00 01 47 9E 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 47 
+chk:F3
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 00
+uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:32:50----->关闭热雾
+Govee:/$ MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 6E 17 A8 
+chk:08
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:32:53----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:32:56----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 05 01
+uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:32:59----->开启童锁
+Govee:/$ MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 71 17 AD 
+chk:10
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 F0 00 01 48 9F 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 48 
+chk:F4
+uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:33:03----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:33:05----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:33:08----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 uart send: 
+55 11 12 00 00 78 
+00
+
+Govee:/$ MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 6D 17 A8 
+chk:07
+uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:33:12----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:33:16----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+uart send: 
+55 11 F0 00 01 49 A0 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 49 
+chk:F5
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:33:19----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:33:20----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 6E 17 A2 
+chk:02
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:33:23----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:33:26----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:33:29----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 71 17 A2 
+chk:05
+uart send: 
+55 11 F0 00 01 4A A1 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 4A 
+chk:F6
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:33:33----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:33:35----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:33:38----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 70 17 9F 
+chk:01
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:33:42----->关闭夜灯color:0 - 0 - 0 rgb_step:25500-14100-1100
+max_temp:5000 lumi_step:5000 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:33:44----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+uart send: 
+55 11 F0 00 01 4B A2 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 4B 
+chk:F7
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:33:48----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:33:50----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 6D 17 A0 
+chk:FF
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:33:53----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:33:56----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:34:00----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 71 17 A0 
+chk:03
+uart send: 
+55 11 F0 00 01 4C A3 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 4C 
+chk:F8
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:34:04----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 02 03
+uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:34:05----->自动挡
+Govee:/$ MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:34:08----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 6F 17 99 
+chk:FA
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:34:12----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:34:14----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+uart send: 
+55 11 F0 00 01 4D A4 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 4D 
+chk:F9
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:34:18----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:34:20----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 6F 17 A2 
+chk:03
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:34:23----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:34:26----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:34:29----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 71 17 9D 
+chk:00
+uart send: 
+55 11 F0 00 01 4E A5 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 4E 
+chk:FA
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:34:33----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:34:35----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:34:38----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 6F 17 87 
+chk:E8
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:34:42----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:34:46----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+uart send: 
+55 11 F0 00 01 4F A6 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 4F 
+chk:FB
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:34:49----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:34:50----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 71 17 7B 
+chk:DE
+iot_test 04 01 01
+uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:34:53----->一档
+Govee:/$ MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:1
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:34:56----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:34:59----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 73 17 71 
+chk:D6
+uart send: 
+55 11 F0 00 01 50 A7 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 50 
+chk:FC
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:35:03----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 00
+uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:35:05----->关闭热雾
+Govee:/$ MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:35:08----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 72 17 69 
+chk:CD
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:35:12----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+HAL_BLE_Disconnect 
+[rtl8720cf_app_handle_io_msg] disconnect conn_id: 0
+rtl8720cf_app_handle_gap_msg p_gap_msg->subtype: 2
+rtl8720cf_app_handle_conn_state_evt conn_id 0 old_state 2 new_state 3, disc_cause 0x0
+rtl8720cf_app_handle_gap_msg p_gap_msg->subtype: 2
+rtl8720cf_app_handle_conn_state_evt conn_id 0 old_state 3 new_state 0, disc_cause 0x116
+[rtl8720cf_app_handle_conn_state_evt]Bluetooth Disconnected,start ADV 80673149
+[rtl8720cf_app_handle_conn_state_evt]Bluetooth Disconnected,start ADV over
+rtl8720cf_app_handle_gap_msg p_gap_msg->subtype: 1
+rtl8720cf_app_handle_dev_state_evt init state 1, adv state 1, cause 0x0, (1, 0)
+rtl8720cf_app_handle_gap_msg p_gap_msg->subtype: 1
+rtl8720cf_app_handle_dev_state_evt init state 1, adv state 2, cause 0x0, (1, 1)
+
+[rtl8720cf_app_handle_dev_state_evt] advertising..80673186
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:35:16----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+uart send: 
+55 11 F0 00 01 51 A8 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 51 
+chk:FD
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:1
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:35:18----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 013 00
+uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:35:20----->关闭显示
+Govee:/$ MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 74 17 64 
+chk:CA
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:35:23----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:35:26----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+ERROR! ble is not connected, rtl8720cf_gap_conn_state: 0
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:35:30----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+ERROR! ble is not connected, rtl8720cf_gap_conn_state: 0
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 73 17 58 
+chk:BD
+uart send: 
+55 11 F0 00 01 52 A9 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 52 
+chk:FE
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:35:34----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:35:35----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:35:38----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 73 17 43 
+chk:A8
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:35:42----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:35:44----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+uart send: 
+55 11 F0 00 01 53 AA 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 53 
+chk:FF
+iot_test 03 01
+uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:35:48----->开启热雾
+Govee:/$ MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:35:50----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 75 17 43 
+chk:AA
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:1
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:35:53----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:35:56----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:35:59----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 71 17 3F 
+chk:A2
+uart send: 
+55 11 F0 00 01 54 AB 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 54 
+chk:00
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:36:03----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:36:05----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:2
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:36:08----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 75 17 3B 
+chk:A2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 00
+uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:36:12----->关机
+Govee:/$ MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+ERROR! ble is not connected, rtl8720cf_gap_conn_state: 0
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:36:16----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+ERROR! ble is not connected, rtl8720cf_gap_conn_state: 0
+uart send: 
+55 11 F0 00 01 55 AC 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 55 
+chk:01
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:36:19----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:36:20----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 74 17 32 
+chk:98
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:36:23----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:36:27----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:36:29----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 74 17 23 
+chk:89
+uart send: 
+55 11 F0 00 01 56 AD 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 56 
+chk:02
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:36:33----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 00
+uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:36:35----->关闭热雾
+Govee:/$ MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:1
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:36:39----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 75 17 15 
+chk:7C
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:36:42----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:36:45----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+uart send: 
+55 11 F0 00 01 57 AE 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 57 
+chk:03
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:36:48----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:36:51----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 74 17 16 
+chk:7C
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:36:54----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+uart send: 
+55 11 F3 00 01 02 5C 
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:36:57----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+ERROR! ble is not connected, rtl8720cf_gap_conn_state: 0
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:37:01----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+ERROR! ble is not connected, rtl8720cf_gap_conn_state: 0
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 73 17 18 
+chk:7D
+uart send: 
+55 11 F0 00 01 58 AF 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 58 
+chk:04
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:37:05----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:37:06----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:2
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:37:09----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 76 17 0F 
+chk:77
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 05
+uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:37:12----->二档
+Govee:/$ MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:37:15----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+uart send: 
+55 11 F0 00 01 59 B0 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 59 
+chk:05
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:37:18----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:37:21----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 76 17 12 
+chk:7A
+iot_test 06 01
+
+Govee:/$ [HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:37:24----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:6375-3525-275
+max_temp:5000 lumi_step:1250 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 06 00
+uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:37:27----->关闭夜灯
+Govee:/$ color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:37:30----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 77 17 13 
+chk:7C
+uart send: 
+55 11 F0 00 01 5A B1 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 5A 
+chk:06
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:37:33----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:37:36----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:37:39----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 77 17 0E 
+chk:77
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:37:42----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+ERROR! ble is not connected, rtl8720cf_gap_conn_state: 0
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:37:46----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+ERROR! ble is not connected, rtl8720cf_gap_conn_state: 0
+uart send: 
+55 11 F0 00 01 5B B2 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 5B 
+chk:07
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:37:49----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:37:51----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 77 17 0B 
+chk:74
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:37:54----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:37:57----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:38:00----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 78 17 09 
+chk:73
+uart send: 
+55 11 F0 00 01 5C B3 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 5C 
+chk:08
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:38:03----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 00
+uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:38:06----->关闭热雾
+Govee:/$ MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:38:09----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 75 17 04 
+chk:6B
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:38:12----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:1
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:38:15----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+uart send: 
+55 11 F0 00 01 5D B4 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 5D 
+chk:09
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:38:18----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:38:21----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 77 17 05 
+chk:6E
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:38:24----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:38:27----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+ERROR! ble is not connected, rtl8720cf_gap_conn_state: 0
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:38:31----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:1
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+ERROR! ble is not connected, rtl8720cf_gap_conn_state: 0
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 7A 17 01 
+chk:6D
+uart send: 
+55 11 F0 00 01 5E B5 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 5E 
+chk:0A
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:38:35----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 02 03
+uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:38:36----->自动挡
+Govee:/$ MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 01
+uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:38:39----->一档
+Govee:/$ MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 79 17 00 
+chk:6B
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:38:42----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:38:45----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+uart send: 
+55 11 F0 00 01 5F B6 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 5F 
+chk:0B
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:38:48----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 00
+uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:38:51----->关闭热雾
+Govee:/$ MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 7A 16 F7 
+chk:62
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:38:54----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:38:57----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:39:00----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 7C 16 F0 
+chk:5D
+uart send: 
+55 11 F0 00 01 60 B7 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 60 
+chk:0C
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:39:03----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+
+[Driver]: set group key to hw: alg:4(WEP40-1 WEP104-5 TKIP-2 AES-4) keyid:2
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:39:06----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:39:09----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
+55 11 F3 00 01 02 5C 
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 7A 16 E5 
+chk:50
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 01 00
+
+Govee:/$ uart send: 
+55 11 01 00 01 00 68 
+2022-10-27 10:39:12----->关机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 00 
+chk:BD
+[rtl8720cf_app_handle_io_msg] update dev status: 0
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+[INFO]:DEV
+===================
+power         :0
+shift         :1
+hotfog        :0
+spray         :9
+child_lock    :0
+RGB on        :0
+water_sw      :1
+display sw    :0
+display 15s   :0
+target humi   :50
+delay  close  :0
+WARN          :0
+===================
+
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 00 01 00 09 00 00 01 00 32 00 00 00 
+chk:F6
+ERROR! ble is not connected, rtl8720cf_gap_conn_state: 0
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 01 01
+
+Govee:/$ uart send: 
+55 11 01 00 01 01 69 
+2022-10-27 10:39:16----->开机MCU Recv: 
+AA 11
+cmd :01 
+len :00 01 
+payload: 01 
+chk:BE
+[rtl8720cf_app_handle_io_msg] update dev status: 1
+[rtl8720cf_app_handle_io_msg] update dev factorty flag: 0
+uart send: 
+55 11 F1 00 00 57 
+MCU Recv: 
+AA 11
+cmd :F2 
+len :00 0C 
+payload: 01 01 00 09 00 00 01 00 32 00 00 00 
+chk:F7
+ERROR! ble is not connected, rtl8720cf_gap_conn_state: 0
+uart send: 
+55 11 F0 00 01 61 B8 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 61 
+chk:0D
+iot_test 02 01
+
+Govee:/$ uart send: 
+55 11 02 00 01 01 6A 
+2022-10-27 10:39:19----->手动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 01 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 02 03
+
+Govee:/$ uart send: 
+55 11 02 00 01 03 6C 
+2022-10-27 10:39:21----->自动挡MCU Recv: 
+AA 11
+cmd :02 
+len :00 01 
+payload: 03 
+chk:C1
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 7C 16 EC 
+chk:59
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 01
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 01 6E 
+2022-10-27 10:39:24----->一档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 01 
+chk:C3
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 04 01 05
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 05 72 
+2022-10-27 10:39:27----->二档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 05 
+chk:C7
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 04 01 09
+
+Govee:/$ uart send: 
+55 11 04 00 02 01 09 76 
+2022-10-27 10:39:30----->三档MCU Recv: 
+AA 11
+cmd :04 
+len :00 02 
+payload: 01 09 
+chk:CB
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 7C 16 E1 
+chk:4E
+uart send: 
+55 11 F0 00 01 62 B9 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 62 
+chk:0E
+iot_test 03 01
+
+Govee:/$ uart send: 
+55 11 03 00 01 01 6B 
+2022-10-27 10:39:33----->开启热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 01 
+chk:C0
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 03 00
+
+Govee:/$ uart send: 
+55 11 03 00 01 00 6A 
+2022-10-27 10:39:36----->关闭热雾MCU Recv: 
+AA 11
+cmd :03 
+len :00 01 
+payload: 00 
+chk:BF
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 06 01
+
+Govee:/$ uart send: 
+55 11 06 00 01 01 6E 
+2022-10-27 10:39:39----->开启夜灯MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 01 
+chk:C3
+color:25500 - 14100 - 1100 rgb_step:364-201-15
+max_temp:5000 lumi_step:71 target: 5000
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 7B 16 D6 
+chk:42
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 06 00
+
+Govee:/$ uart send: 
+55 11 06 00 01 00 6D 
+2022-10-27 10:39:42----->关闭夜灯color:0 - 0 - 0 rgb_step:1108-613-47
+max_temp:5000 lumi_step:217 target: 0
+MCU Recv: 
+AA 11
+cmd :06 
+len :00 01 
+payload: 00 
+chk:C2
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 05 01
+
+Govee:/$ uart send: 
+55 11 05 00 01 01 6D 
+2022-10-27 10:39:45----->开启童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 01 
+chk:C2
+uart send: 
+55 11 F0 00 01 63 BA 
+MCU Recv: 
+AA 11
+cmd :F0 
+len :00 01 
+payload: 63 
+chk:0F
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 05 00
+
+Govee:/$ uart send: 
+55 11 05 00 01 00 6C 
+2022-10-27 10:39:48----->关闭童锁MCU Recv: 
+AA 11
+cmd :05 
+len :00 01 
+payload: 00 
+chk:C1
+[HAL_Flash_WriteData] flash_addr: 0x1f8000, len: 389
+iot_test 013 00
+
+Govee:/$ uart send: 
+55 11 13 00 01 00 7A 
+2022-10-27 10:39:51----->关闭显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 00 
+chk:CF
+uart send: 
+55 11 12 00 00 78 
+MCU Recv: 
+AA 11
+cmd :12 
+len :00 04 
+payload: 0A 7A 16 DA 
+chk:45
+[HAL_Flash_WriteData] flash_addr: 0x1f7000, len: 389
+iot_test 13 01
+
+Govee:/$ uart send: 
+55 11 13 00 01 01 7B 
+2022-10-27 10:39:54----->开启显示MCU Recv: 
+AA 11
+cmd :13 
+len :00 01 
+payload: 01 
+chk:D0
+uart send: 
