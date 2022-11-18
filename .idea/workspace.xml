@@ -36,36 +36,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/王衍升/Desktop/lanjingautotest&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Python&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/wys/AutoTestProjects/yali_Autotool/config",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Python"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wys\AutoTestProjects\yali_Autotool\config" />
       <recent name="C:\wys\AutoTestProjects" />
       <recent name="C:\wys\AutoTestProjects\QtProject" />
       <recent name="C:\wys\AutoTestProjects\GoveeTest_H7143\PageObjects" />
       <recent name="C:\wys\AutoTestProjects\GoveeProject\package_api" />
-      <recent name="C:\wys\AutoTestProjects\Govee_all_pytest\Outputs\running_screenshots" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wys\AutoTestProjects\yali_Autotool\config" />
+      <recent name="C:\wys\AutoTestProjects\yali_Autotool\package_common" />
+      <recent name="C:\wys\AutoTestProjects\yali_Autotool" />
+      <recent name="C:\wys\AutoTestProjects\yali_Autotool\logs" />
       <recent name="C:\wys\AutoTestProjects" />
-      <recent name="C:\wys\AutoTestProjects\挂机测试" />
-      <recent name="C:\wys\AutoTestProjects\家电脚本\log1" />
-      <recent name="C:\wys\AutoTestProjects\家电脚本\myConfig1" />
-      <recent name="C:\wys\AutoTestProjects\家电脚本\ui2Handle" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in jiadianMainCase.py">
-    <configuration name="jiadianHandle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.run">
+    <configuration name="common" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AutoTestProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -73,11 +73,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/H7130_Auto/ui2Handle" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yali_Autotool/package_common" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/H7130_Auto/ui2Handle/jiadianHandle.py" />
+      <option name="SCRIPT_NAME" value="C:\wys\AutoTestProjects\yali_Autotool\package_common\common.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -86,74 +86,46 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for jiadianMainCase.JiaDianMainCase (1)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="handle_page" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AutoTestProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/H7131_Auto" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yali_Autotool/package_page" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;jiadianMainCase.JiaDianMainCase&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="C:\wys\AutoTestProjects\yali_Autotool\package_page\handle_page.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for jiadianMainCase.JiaDianMainCase" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AutoTestProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/H7130_Auto" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yali_Autotool" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;jiadianMainCase.JiaDianMainCase&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for jiadianMainCase.JiaDianMainCase.test_jiadian_mode" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="AutoTestProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/H7130_Auto" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;jiadianMainCase.JiaDianMainCase.test_jiadian_mode&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests in jiadianMainCase.py (1)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="AutoTestProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/H7131_Auto" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/H7131_Auto/jiadianMainCase.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests in jiadianMainCase.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="AutoTestProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/H7130_Auto" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/H7130_Auto/jiadianMainCase.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yali_Autotool/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in jiadianMainCase.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -170,21 +142,11 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python.jiadianHandle" />
-      <item itemvalue="Python tests.Python tests for jiadianMainCase.JiaDianMainCase" />
-      <item itemvalue="Python tests.Python tests for jiadianMainCase.JiaDianMainCase.test_jiadian_mode" />
-      <item itemvalue="Python tests.Python tests in jiadianMainCase.py (1)" />
-      <item itemvalue="Python tests.Python tests in jiadianMainCase.py" />
-      <item itemvalue="Python tests.Python tests for jiadianMainCase.JiaDianMainCase (1)" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in jiadianMainCase.py" />
-        <item itemvalue="Python tests.Python tests for jiadianMainCase.JiaDianMainCase (1)" />
-        <item itemvalue="Python tests.Python tests in jiadianMainCase.py (1)" />
-        <item itemvalue="Python tests.Python tests for jiadianMainCase.JiaDianMainCase (1)" />
-        <item itemvalue="Python tests.Python tests for jiadianMainCase.JiaDianMainCase.test_jiadian_mode" />
+        <item itemvalue="Python.run" />
+        <item itemvalue="Python.common" />
+        <item itemvalue="Python.handle_page" />
       </list>
     </recent_temporary>
   </component>
