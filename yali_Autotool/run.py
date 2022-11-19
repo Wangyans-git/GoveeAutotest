@@ -3,7 +3,7 @@
 # @Time    : 
 # @Author  : https://blog.csdn.net/zhouzhiwengang/article/details/119735750
 # @File    : https://blog.csdn.net/zhouzhiwengang/article/details/119735750
-# @Description : 主程序
+# @Description : 主程序111
 import threading
 
 from PySide2.QtGui import QIcon
