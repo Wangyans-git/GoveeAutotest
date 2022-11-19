@@ -4,12 +4,12 @@
 # @Author  : https://blog.csdn.net/zhouzhiwengang/article/details/119735750
 # @File    : https://blog.csdn.net/zhouzhiwengang/article/details/119735750
 # @Description : 页面操作
-
+from yali_Autotool.run import program
 
 # 获取手机屏幕宽度
-def get_size(self):
+def get_size():
     # 获取窗口尺寸
-    size = self.driver.get_window_size()
+    size = program.driver.get_window_size()
     x = size['width']
     y = size['height']
     return x, y

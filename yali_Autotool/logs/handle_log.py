@@ -9,9 +9,11 @@ import datetime
 from yali_Autotool.run import program
 
 
-class handle_date():
+class HandleDate(object):
+
     # 判断错误数据
-    def date_result(self, n):
+    @staticmethod
+    def date_result(n):
         date = program.err_date.split('.')
         if len(date) - 1 == len(n):  # 因为split分隔后会多一段数据，所以-1
             program.err_date = ''
