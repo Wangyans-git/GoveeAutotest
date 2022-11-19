@@ -10,7 +10,6 @@ from PySide2.QtGui import QIcon
 from PySide2.QtWidgets import QWidget, QApplication
 from PySide2.QtUiTools import QUiLoader
 
-
 import sys
 
 
@@ -32,7 +31,7 @@ class Auto_main(QWidget):
         self.ui.add_tempBox.clicked.connect(self.add_temp_func)  # 复选绑定温湿度计功能
         self.ui.quitButton.clicked.connect(self.quit_app)  # 退出
 
-        self.ui.skuBox.addItems(['H7130', 'H7131', 'H7143'])   # 下拉选择
+        self.ui.skuBox.addItems(['H7130', 'H7131', 'H7143'])  # 下拉选择
 
         # 默认设置
         self.ui.main_funBox.setChecked(True)  # 默认设置为主功能
@@ -41,8 +40,6 @@ class Auto_main(QWidget):
     @staticmethod
     def quit_app():
         sys.exit()
-
-
 
 
 if __name__ == '__main__':
