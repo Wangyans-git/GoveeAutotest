@@ -9,3 +9,4 @@ if __name__ == '__main__':
     program = HandleMian()
     program.ui.show()
     app.exec_()
+    print("222")
