@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3b28839-5dd1-459a-b902-7ab4cbb2cc40" name="Changes" comment="代码提交">
-      <change afterPath="$PROJECT_DIR$/yali_Autotool/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yali_Autotool/package_common/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/yali_Autotool/package_common/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yali_Autotool/package_main/handle_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/yali_Autotool/package_main/handle_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yali_Autotool/package_page/handle_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/yali_Autotool/package_page/handle_page.py" afterDir="false" />
-    </list>
+    <list default="true" id="b3b28839-5dd1-459a-b902-7ab4cbb2cc40" name="Changes" comment="代码提交" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,6 +166,14 @@
       <option name="presentableId" value="Default" />
       <updated>1669016986575</updated>
     </task>
+    <task id="LOCAL-00001" summary="代码提交">
+      <created>1669043076305</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669043076305</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,6 +189,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交" />
+    <MESSAGE value="代码提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码提交" />
   </component>
 </project>

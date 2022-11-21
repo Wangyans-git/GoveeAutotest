@@ -1,0 +1,318 @@
+Index: yali_Autotool/package_main/handle_main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#!C:\\wys\\AutoTestProjects\r\n# -*- coding: utf-8 -*-\r\n# @Time    : \r\n# @Author  : \r\n# @File    : \r\n# @Description : 处理串口\r\nimport datetime\r\nimport threading\r\nimport time\r\nfrom PySide2.QtWidgets import QWidget, QApplication\r\nfrom PySide2.QtUiTools import QUiLoader\r\nimport sys\r\nfrom PySide2.QtGui import QIcon\r\nfrom PySide2.QtWidgets import QWidget, QApplication\r\nfrom appium import webdriver\r\nimport serial\r\n\r\n\r\nfrom yali_Autotool.package_page.handle_page import AppTest\r\n\r\n\r\nclass HandleMian(QWidget):\r\n    def __init__(self):\r\n        super().__init__()\r\n        # self.err = 0\r\n        # self.dbs = dbs\r\n        # self.timeout = timeout\r\n        # self.err_date = ''  # 做是否有错误判断的数据\r\n        # self.txt_date = ''  # 写入TXT的数据\r\n        # self.err_count = 0  # 记录错误次数\r\n\r\n        self.ui = QUiLoader().load('config/Skutest.ui')\r\n        self.ui.setMinimumSize(600, 700)\r\n        self.ui.setMaximumSize(600, 700)\r\n        # self.ui.main_funBox.clicked.connect(self.main_func)  # 复选助主功能功能\r\n\r\n        # self.ui.add_tempBox.clicked.connect(self.add_temp_func)  # 复选绑定温湿度计功能\r\n        # self.ui.quitButton.clicked.connect(self.quit_app)  # 退出\r\n\r\n        self.ui.skuBox.addItems(['H7130', 'H7131', 'H7143'])  # 下拉选择\r\n\r\n        # 默认设置\r\n        self.ui.main_funBox.setChecked(True)  # 默认设置为主功能\r\n\r\n    # 复选主功能\r\n    # def main_func(self, dbs, timeout):\r\n    #     try:\r\n    #         com = self.ui.serialEdit.text()  # 串口\r\n    #         self.ser = serial.Serial(com,\r\n    #                                  # self.ser = serial.Serial('com8',\r\n    #                                  dbs,\r\n    #                                  timeout=timeout)\r\n    #         self.ui.resultBrowser.append(\"*********连接串口成功*********\")\r\n    #         self.ui.mucButton.setEnabled(False)\r\n    #         self.ui.appButton.setEnabled(False)\r\n    #     except Exception:\r\n    #         self.ui.resultBrowser.append(\"*********端口号错误或者未填写端口号*********\")\r\n    #         self.ui.resultBrowser.append(\"*********需要重新打开程序*********\")\r\n    #         # self.ui.mcuBox.setEnabled(True)\r\n    #         self.err = -1\r\n    #     if self.ui.main_funBox.isChecked():\r\n    #         self.ui.pushButton.clicked.connect(self.thread_recv)\r\n\r\n    # 复选app添加设备\r\n    def add_device_func(self, dbs, timeout):\r\n        self.dbs = dbs\r\n        self.timeout = timeout\r\n        try:\r\n            com = self.ui.serialEdit.text()  # 串口\r\n            self.ser = serial.Serial(com,\r\n                                     # self.ser = serial.Serial('com8',\r\n                                     self.dbs,\r\n                                     timeout=self.timeout)\r\n            self.ui.resultBrowser.append(\"*********连接串口成功*********\")\r\n        except Exception:\r\n            self.ui.resultBrowser.append(\"*********端口号错误或者未填写端口号*********\")\r\n            self.ui.resultBrowser.append(\"*********需要重新打开程序*********\")\r\n            # self.ui.mcuBox.setEnabled(True)\r\n            self.err = -1\r\n        if self.ui.add_deviceBox.isChecked():\r\n            # self.ui.pushButton.clicked.connect(self.thread_recv)  # 断言判断\r\n            self.ui.pushButton.clicked.connect(self.thread_add_devices)  # appium启动配置\r\n\r\n    # 复选app绑定温湿度计\r\n    def add_temp_func(self, dbs, timeout):\r\n        self.dbs = dbs\r\n        self.timeout = timeout\r\n        try:\r\n            com = self.ui.serialEdit.text()  # 串口\r\n            self.ser = serial.Serial(com,\r\n                                     # self.ser = serial.Serial('com8',\r\n                                     self.dbs,\r\n                                     timeout=self.timeout)\r\n            self.ui.resultBrowser.append(\"*********连接串口成功*********\")\r\n        except Exception:\r\n            self.ui.resultBrowser.append(\"*********端口号错误或者未填写端口号*********\")\r\n            self.ui.resultBrowser.append(\"*********需要重新打开程序*********\")\r\n            # self.ui.mcuBox.setEnabled(True)\r\n            self.err = -1\r\n        if self.ui.add_tempBox.isChecked():\r\n            self.ui.pushButton.clicked.connect(self.thread_recv)  # 断言判断\r\n            self.ui.pushButton.clicked.connect(self.thread_add_temp)  # appium启动配置\r\n\r\n    # 处理串口数据，接收串口返回数据\r\n    def read_date(self):\r\n        check_edit = self.ui.assertTextEdit.toPlainText().split(\",\")\r\n        check_dates = {}  # 断言数据\r\n        while True:\r\n            now_time = datetime.datetime.now().strftime(\"%Y-%m-%d %H:%M:%S----->\")\r\n            is_success_date = ''  # 判断是否执行成功的临时数据\r\n            try:\r\n                date_line = self.ser.readline().decode()\r\n                time.sleep(0.1)\r\n                is_success_date += date_line\r\n                self.txt_date += str(date_line)  # 所有写入到txt文档\r\n                self.write_txt(self.txt_date)\r\n                for i in range(len(check_edit)):\r\n                    # 开机:55 11 01 00 01 01 69, 关机:55 11 01 00 01 00 68\r\n                    check_dates[check_edit[i].split(\":\")[0]] = check_edit[i].split(\":\")[1]  # 将每个输入的键值对加入到字典里\r\n                    check_list = []\r\n                    for j in check_dates:\r\n                        check_list.append(j)\r\n                    if check_dates[check_list[i]] in date_line:\r\n                        success_date = str(now_time + check_list[i]) + \".\"\r\n                        self.err_date += success_date\r\n                        self.txt_date += success_date\r\n                        self.ui.resultBrowser.append(success_date)\r\n            except Exception:\r\n                break\r\n\r\n        \"\"\"\r\n        线程控制app\r\n        \"\"\"\r\n\r\n    # app添加设备\r\n    def thread_add_devices(self):\r\n        try:\r\n            self.add_devices_thread = threading.Thread(target=AppTest.add_devices)\r\n            self.add_devices_thread.start()\r\n        except Exception as e:\r\n            print(\"无法启动线程:{}\".format(e))\r\n\r\n    # app绑定温湿度计\r\n    def thread_add_temp(self):\r\n        try:\r\n            self.add_temp_thread = threading.Thread(target=add_temp)\r\n            self.add_temp_thread.start()\r\n        except Exception as e:\r\n            print(\"无法启动线程:{}\".format(e))\r\n\r\n    # 线程读取数据\r\n    def thread_recv(self):\r\n        try:\r\n            self.recv_thread = threading.Thread(target=self.read_date)\r\n            self.recv_thread.start()\r\n        except Exception as e:\r\n            print(\"无法启动线程:{}\".format(e))\r\n\r\n\r\napp = QApplication([])\r\napp.setWindowIcon(QIcon(\"config/touxiang.ico\"))\r\nprogram = HandleMian()\r\nprogram.ui.show()\r\napp.exec_()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/yali_Autotool/package_main/handle_main.py b/yali_Autotool/package_main/handle_main.py
+--- a/yali_Autotool/package_main/handle_main.py	
++++ b/yali_Autotool/package_main/handle_main.py	
+@@ -7,41 +7,28 @@
+ import datetime
+ import threading
+ import time
+-from PySide2.QtWidgets import QWidget, QApplication
+-from PySide2.QtUiTools import QUiLoader
+-import sys
+-from PySide2.QtGui import QIcon
+-from PySide2.QtWidgets import QWidget, QApplication
+-from appium import webdriver
+ import serial
++from PySide2.QtUiTools import QUiLoader
+ 
+-
++from yali_Autotool.package_common.common import config, app
+ from yali_Autotool.package_page.handle_page import AppTest
+ 
+ 
+-class HandleMian(QWidget):
+-    def __init__(self):
+-        super().__init__()
+-        # self.err = 0
+-        # self.dbs = dbs
+-        # self.timeout = timeout
+-        # self.err_date = ''  # 做是否有错误判断的数据
+-        # self.txt_date = ''  # 写入TXT的数据
+-        # self.err_count = 0  # 记录错误次数
++class HandleMian():
++    def d(self):
++
++        # config.ui.main_funBox.clicked.connect(self.main_func)  # 复选助主功能功能
++        config.ui.add_deviceBox.clicked.connect(self.add_device_func)  # 复选添加设备
++        # config.ui.add_tempBox.clicked.connect(self.add_temp_func)  # 复选绑定温湿度计功能
++        # config.ui.quitButton.clicked.connect(self.quit_app)  # 退出
++
++    # self.err = 0
++    # self.dbs = dbs
++    # self.timeout = timeout
++    # self.err_date = ''  # 做是否有错误判断的数据
++    # self.txt_date = ''  # 写入TXT的数据
++    # self.err_count = 0  # 记录错误次数
+ 
+-        self.ui = QUiLoader().load('config/Skutest.ui')
+-        self.ui.setMinimumSize(600, 700)
+-        self.ui.setMaximumSize(600, 700)
+-        # self.ui.main_funBox.clicked.connect(self.main_func)  # 复选助主功能功能
+-
+-        # self.ui.add_tempBox.clicked.connect(self.add_temp_func)  # 复选绑定温湿度计功能
+-        # self.ui.quitButton.clicked.connect(self.quit_app)  # 退出
+-
+-        self.ui.skuBox.addItems(['H7130', 'H7131', 'H7143'])  # 下拉选择
+-
+-        # 默认设置
+-        self.ui.main_funBox.setChecked(True)  # 默认设置为主功能
+-
+     # 复选主功能
+     # def main_func(self, dbs, timeout):
+     #     try:
+@@ -62,71 +49,70 @@
+     #         self.ui.pushButton.clicked.connect(self.thread_recv)
+ 
+     # 复选app添加设备
+-    def add_device_func(self, dbs, timeout):
+-        self.dbs = dbs
+-        self.timeout = timeout
+-        try:
+-            com = self.ui.serialEdit.text()  # 串口
+-            self.ser = serial.Serial(com,
+-                                     # self.ser = serial.Serial('com8',
+-                                     self.dbs,
+-                                     timeout=self.timeout)
+-            self.ui.resultBrowser.append("*********连接串口成功*********")
+-        except Exception:
+-            self.ui.resultBrowser.append("*********端口号错误或者未填写端口号*********")
+-            self.ui.resultBrowser.append("*********需要重新打开程序*********")
+-            # self.ui.mcuBox.setEnabled(True)
+-            self.err = -1
+-        if self.ui.add_deviceBox.isChecked():
++    def add_device_func(self):
++        self.ui = QUiLoader().load('../config/Skutest.ui')
++        # try:
++        #     com = config.ui.serialEdit.text()  # 串口
++        #     self.ser = serial.Serial(com,
++        #                              # self.ser = serial.Serial('com8',
++        #                              115200,
++        #                              timeout=1)
++        #     config.ui.resultBrowser.append("*********连接串口成功*********")
++        # except Exception:
++        #     config.ui.resultBrowser.append("*********端口号错误或者未填写端口号*********")
++        #     config.ui.resultBrowser.append("*********需要重新打开程序*********")
++        #     # self.ui.mcuBox.setEnabled(True)
++        #     self.err = -1
++        if config.ui.add_deviceBox.isChecked():
+             # self.ui.pushButton.clicked.connect(self.thread_recv)  # 断言判断
+-            self.ui.pushButton.clicked.connect(self.thread_add_devices)  # appium启动配置
++            config.ui.pushButton.clicked.connect(self.thread_add_devices)  # appium启动配置
+ 
+-    # 复选app绑定温湿度计
+-    def add_temp_func(self, dbs, timeout):
+-        self.dbs = dbs
+-        self.timeout = timeout
+-        try:
+-            com = self.ui.serialEdit.text()  # 串口
+-            self.ser = serial.Serial(com,
+-                                     # self.ser = serial.Serial('com8',
+-                                     self.dbs,
+-                                     timeout=self.timeout)
+-            self.ui.resultBrowser.append("*********连接串口成功*********")
+-        except Exception:
+-            self.ui.resultBrowser.append("*********端口号错误或者未填写端口号*********")
+-            self.ui.resultBrowser.append("*********需要重新打开程序*********")
+-            # self.ui.mcuBox.setEnabled(True)
+-            self.err = -1
+-        if self.ui.add_tempBox.isChecked():
+-            self.ui.pushButton.clicked.connect(self.thread_recv)  # 断言判断
+-            self.ui.pushButton.clicked.connect(self.thread_add_temp)  # appium启动配置
++        # # 复选app绑定温湿度计
++        # def add_temp_func(self, dbs, timeout):
++        #     self.dbs = dbs
++        #     self.timeout = timeout
++        #     try:
++        #         com = self.ui.serialEdit.text()  # 串口
++        #         self.ser = serial.Serial(com,
++        #                                  # self.ser = serial.Serial('com8',
++        #                                  self.dbs,
++        #                                  timeout=self.timeout)
++        #         self.ui.resultBrowser.append("*********连接串口成功*********")
++        #     except Exception:
++        #         self.ui.resultBrowser.append("*********端口号错误或者未填写端口号*********")
++        #         self.ui.resultBrowser.append("*********需要重新打开程序*********")
++        #         # self.ui.mcuBox.setEnabled(True)
++        #         self.err = -1
++        #     if self.ui.add_tempBox.isChecked():
++        #         self.ui.pushButton.clicked.connect(self.thread_recv)  # 断言判断
++        #         self.ui.pushButton.clicked.connect(self.thread_add_temp)  # appium启动配置
+ 
+-    # 处理串口数据，接收串口返回数据
+-    def read_date(self):
+-        check_edit = self.ui.assertTextEdit.toPlainText().split(",")
+-        check_dates = {}  # 断言数据
+-        while True:
+-            now_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S----->")
+-            is_success_date = ''  # 判断是否执行成功的临时数据
+-            try:
+-                date_line = self.ser.readline().decode()
+-                time.sleep(0.1)
+-                is_success_date += date_line
+-                self.txt_date += str(date_line)  # 所有写入到txt文档
+-                self.write_txt(self.txt_date)
+-                for i in range(len(check_edit)):
+-                    # 开机:55 11 01 00 01 01 69, 关机:55 11 01 00 01 00 68
+-                    check_dates[check_edit[i].split(":")[0]] = check_edit[i].split(":")[1]  # 将每个输入的键值对加入到字典里
+-                    check_list = []
+-                    for j in check_dates:
+-                        check_list.append(j)
+-                    if check_dates[check_list[i]] in date_line:
+-                        success_date = str(now_time + check_list[i]) + "."
+-                        self.err_date += success_date
+-                        self.txt_date += success_date
+-                        self.ui.resultBrowser.append(success_date)
+-            except Exception:
+-                break
++        # # 处理串口数据，接收串口返回数据
++        # def read_date(self):
++        #     check_edit = self.ui.assertTextEdit.toPlainText().split(",")
++        #     check_dates = {}  # 断言数据
++        #     while True:
++        #         now_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S----->")
++        #         is_success_date = ''  # 判断是否执行成功的临时数据
++        #         try:
++        #             date_line = self.ser.readline().decode()
++        #             time.sleep(0.1)
++        #             is_success_date += date_line
++        #             self.txt_date += str(date_line)  # 所有写入到txt文档
++        #             self.write_txt(self.txt_date)
++        #             for i in range(len(check_edit)):
++        #                 # 开机:55 11 01 00 01 01 69, 关机:55 11 01 00 01 00 68
++        #                 check_dates[check_edit[i].split(":")[0]] = check_edit[i].split(":")[1]  # 将每个输入的键值对加入到字典里
++        #                 check_list = []
++        #                 for j in check_dates:
++        #                     check_list.append(j)
++        #                 if check_dates[check_list[i]] in date_line:
++        #                     success_date = str(now_time + check_list[i]) + "."
++        #                     self.err_date += success_date
++        #                     self.txt_date += success_date
++        #                     self.ui.resultBrowser.append(success_date)
++        #         except Exception:
++        #             break
+ 
+         """
+         线程控制app
+@@ -140,25 +126,21 @@
+         except Exception as e:
+             print("无法启动线程:{}".format(e))
+ 
+-    # app绑定温湿度计
+-    def thread_add_temp(self):
+-        try:
+-            self.add_temp_thread = threading.Thread(target=add_temp)
+-            self.add_temp_thread.start()
+-        except Exception as e:
+-            print("无法启动线程:{}".format(e))
++    # # app绑定温湿度计
++    # def thread_add_temp(self):
++    #     try:
++    #         self.add_temp_thread = threading.Thread(target=add_temp)
++    #         self.add_temp_thread.start()
++    #     except Exception as e:
++    #         print("无法启动线程:{}".format(e))
++    #
++    # # 线程读取数据
++    # def thread_recv(self):
++    #     try:
++    #         self.recv_thread = threading.Thread(target=self.read_date)
++    #         self.recv_thread.start()
++    #     except Exception as e:
++    #         print("无法启动线程:{}".format(e))
+ 
+-    # 线程读取数据
+-    def thread_recv(self):
+-        try:
+-            self.recv_thread = threading.Thread(target=self.read_date)
+-            self.recv_thread.start()
+-        except Exception as e:
+-            print("无法启动线程:{}".format(e))
+ 
+-
+-app = QApplication([])
+-app.setWindowIcon(QIcon("config/touxiang.ico"))
+-program = HandleMian()
+-program.ui.show()
+-app.exec_()
++mian = HandleMian()
+Index: yali_Autotool/package_common/common.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#!C:\\wys\\AutoTestProjects\r\n# -*- coding: utf-8 -*-\r\n# @Time    :\r\n# @Author  : https://blog.csdn.net/zhouzhiwengang/article/details/119735750\r\n# @File    : https://blog.csdn.net/zhouzhiwengang/article/details/119735750\r\n# @Description : 页面操作\r\nfrom yali_Autotool.run import program\r\n\r\n# 获取手机屏幕宽度\r\ndef get_size():\r\n    # 获取窗口尺寸\r\n    size = program.driver.get_window_size()\r\n    x = size['width']\r\n    y = size['height']\r\n    return x, y\r\n\r\n\r\ndef swipe_down(self):\r\n    # 向下滑动\r\n    size = self.get_size()\r\n    x1 = int(size[0] * 0.5)\r\n    y1 = int(size[1] * 0.9)\r\n    y2 = int(size[1] * 0.1)\r\n    self.driver.swipe(x1, y1, x1, y2, 500)\r\n\r\n\r\ndef swipe_up(self):\r\n    # 向上滑动\r\n    size = self.get_size()\r\n    x1 = int(size[0] * 0.5)\r\n    y1 = int(size[1] * 0.1)\r\n    y2 = int(size[1] * 0.9)\r\n    self.driver.swipe(x1, y1, x1, y2, 500)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/yali_Autotool/package_common/common.py b/yali_Autotool/package_common/common.py
+--- a/yali_Autotool/package_common/common.py	
++++ b/yali_Autotool/package_common/common.py	
+@@ -4,30 +4,42 @@
+ # @Author  : https://blog.csdn.net/zhouzhiwengang/article/details/119735750
+ # @File    : https://blog.csdn.net/zhouzhiwengang/article/details/119735750
+ # @Description : 页面操作
+-from yali_Autotool.run import program
++from appium import webdriver
++from PySide2.QtUiTools import QUiLoader
++from PySide2.QtGui import QIcon
++from PySide2.QtWidgets import QWidget, QApplication
+ 
+-# 获取手机屏幕宽度
+-def get_size():
+-    # 获取窗口尺寸
+-    size = program.driver.get_window_size()
+-    x = size['width']
+-    y = size['height']
+-    return x, y
+ 
++class Config(QWidget):
++    def __init__(self):
++        super().__init__()
++        self.ui = QUiLoader().load('../config/Skutest.ui')
++        self.ui.setMinimumSize(600, 700)
++        self.ui.setMaximumSize(600, 700)
++        self.ui.skuBox.addItems(['H7130', 'H7131', 'H7143'])  # 下拉选择
++        # 默认设置
++        self.ui.main_funBox.setChecked(True)  # 默认设置为主功能
+ 
+-def swipe_down(self):
+-    # 向下滑动
+-    size = self.get_size()
+-    x1 = int(size[0] * 0.5)
+-    y1 = int(size[1] * 0.9)
+-    y2 = int(size[1] * 0.1)
+-    self.driver.swipe(x1, y1, x1, y2, 500)
++    def appium_config(self):
++        desired_caps = {
++            'platformName': 'Android',
++            # 'platformVersion': '11',
++            'platformVersion': '7.1.2',
++            # 'deviceName': "424e4d504c383098",  # 三星
++            # 'deviceName': "d5cd8968",  # 小米10
++            'deviceName': "emulator-5554",  # 模拟器
++            'appPackage': 'com.govee.home',
++            'appActivity': 'com.govee.home.HomeActivity',
++            'autoAcceptAlerts': 'true',  # 默认选择接受弹窗的条款
++            'noReset': 'true',  # 启动app时不要清除app里原有的数据
++        }
++        self.driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_capabilities=desired_caps)
++        self.driver.implicitly_wait(60)
+ 
+ 
+-def swipe_up(self):
+-    # 向上滑动
+-    size = self.get_size()
+-    x1 = int(size[0] * 0.5)
+-    y1 = int(size[1] * 0.1)
+-    y2 = int(size[1] * 0.9)
+-    self.driver.swipe(x1, y1, x1, y2, 500)
++app = QApplication([])
++app.setWindowIcon(QIcon("config/touxiang.ico"))
++config = Config()
++# config.appium_config()
++config.ui.show()
++app.exec_()
