@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3b28839-5dd1-459a-b902-7ab4cbb2cc40" name="Changes" comment="代码提交">
-      <change afterPath="$PROJECT_DIR$/yali_Autotool/package_main/__init__.py" afterDir="false" />
+    <list default="true" id="fab08ede-30be-4ed2-b397-511281839135" name="Changes" comment="提交">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yali_Autotool/logs/handle_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/yali_Autotool/logs/handle_log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoveeProject/package_app/H7131_AutoApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoveeProject/package_app/H7131_AutoApp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoveeProject/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoveeProject/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yali_Autotool/config/Skutest.ui" beforeDir="false" afterPath="$PROJECT_DIR$/yali_Autotool/Skutest.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yali_Autotool/package_common/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/yali_Autotool/package_common/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yali_Autotool/package_page/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yali_Autotool/package_page/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yali_Autotool/package_main/handle_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/yali_Autotool/package_main/handle_main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yali_Autotool/package_page/handle_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/yali_Autotool/package_page/handle_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yali_Autotool/package_serial/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yali_Autotool/package_serial/handle _main.py" beforeDir="false" afterPath="$PROJECT_DIR$/yali_Autotool/package_main/handle_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yali_Autotool/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/yali_Autotool/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yali_Autotool/run.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,79 +30,27 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Hg0R02rtJaUk3A9e8cPzfi3kRf" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2HqeLDkM5IzllVaEabDyujiFuaE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/GoveeAutotest",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/wys/AutoTestProjects&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GoveeAutotest" />
-      <recent name="D:\GoveeAutotest\GoveeProject" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\GoveeAutotest\yali_Autotool\package_serial" />
-      <recent name="D:\GoveeAutotest\yali_Autotool\package_page" />
-      <recent name="D:\GoveeAutotest\yali_Autotool\page_serial1" />
-      <recent name="D:\GoveeAutotest\yali_Autotool" />
-      <recent name="D:\GoveeAutotest\yali_Autotool\config" />
+      <recent name="C:\wys\AutoTestProjects\yali_Autotool" />
+      <recent name="C:\wys\AutoTestProjects\yali_Autotool\package_main" />
+      <recent name="C:\wys\AutoTestProjects\yali_Autotool\config" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run (1)">
-    <configuration name="AutoTool" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="GoveeAutotest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yali_Autotool" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yali_Autotool/AutoTool.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="GoveeAutotest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.run">
     <configuration name="handle_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AutoTestProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -124,7 +72,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="handle_page" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AutoTestProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yali_Autotool/package_page" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yali_Autotool/package_page/handle_page.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AutoTestProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -153,11 +122,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yali_Autotool" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yali_Autotool/package_main" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\GoveeAutotest\yali_Autotool\run.py" />
+      <option name="SCRIPT_NAME" value="C:\wys\AutoTestProjects\yali_Autotool\run.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -166,163 +135,70 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="GoveeAutotest" />
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AutoTestProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yali_Autotool" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Autodetect">
-      <module name="GoveeAutotest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="GoveeAutotest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
+      <option name="SCRIPT_NAME" value="C:\wys\AutoTestProjects\yali_Autotool\package_main\run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.run (1)" />
-        <item itemvalue="Python.handle_main" />
         <item itemvalue="Python.run" />
-        <item itemvalue="Python.AutoTool" />
+        <item itemvalue="Python.handle_main" />
+        <item itemvalue="Python.handle_page" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b3b28839-5dd1-459a-b902-7ab4cbb2cc40" name="Changes" comment="" />
-      <created>1668691406568</created>
+      <changelist id="fab08ede-30be-4ed2-b397-511281839135" name="Changes" comment="" />
+      <created>1669016986575</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1668691406568</updated>
+      <updated>1669016986575</updated>
     </task>
-    <task id="LOCAL-00001" summary="代码提交">
-      <created>1668695071311</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1668695071311</updated>
-    </task>
-    <task id="LOCAL-00002" summary="代码提交">
-      <created>1668695109250</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1668695109250</updated>
-    </task>
-    <task id="LOCAL-00003" summary="代码提交">
-      <created>1668695380736</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1668695380736</updated>
-    </task>
-    <task id="LOCAL-00004" summary="代码提交">
-      <created>1668866247625</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1668866247625</updated>
-    </task>
-    <task id="LOCAL-00005" summary="代码提交">
-      <created>1668866293211</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1668866293211</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
-        <entry key="51cd0e04-e3dc-4176-9233-fe86326dea16">
-          <value>
-            <State>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                  <entry key="roots">
-                    <value>
-                      <list>
-                        <option value="$PROJECT_DIR$" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
-      </map>
-    </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="51cd0e04-e3dc-4176-9233-fe86326dea16" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="代码提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="代码提交" />
+    <MESSAGE value="提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/yali_Autotool/package_main/handle_main.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

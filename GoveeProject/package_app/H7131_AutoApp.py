@@ -148,6 +148,7 @@ class ExecuteApp(object):
 
 
 if __name__ == "__main__":
+    print("555")
     desired_caps = {
         'platformName': 'Android',
         'platformVersion': '11',

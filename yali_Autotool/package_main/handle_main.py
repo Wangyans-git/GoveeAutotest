@@ -22,6 +22,8 @@ from yali_Autotool.package_page.handle_page import AppTest
 class HandleMian(QWidget):
     def __init__(self):
         super().__init__()
+        self.dbs = 115200,
+        self.timeout = 1
         # self.err = 0
         # self.dbs = dbs
         # self.timeout = timeout
@@ -29,12 +31,11 @@ class HandleMian(QWidget):
         # self.txt_date = ''  # 写入TXT的数据
         # self.err_count = 0  # 记录错误次数
 
-        self.ui = QUiLoader().load('config/Skutest.ui')
+        self.ui = QUiLoader().load('./Skutest.ui')
         self.ui.setMinimumSize(600, 700)
         self.ui.setMaximumSize(600, 700)
         # self.ui.main_funBox.clicked.connect(self.main_func)  # 复选助主功能功能
-
-        # self.ui.add_tempBox.clicked.connect(self.add_temp_func)  # 复选绑定温湿度计功能
+        self.ui.add_deviceBox.clicked.connect(self.add_device_func)  # 复选绑定温湿度计功能
         # self.ui.quitButton.clicked.connect(self.quit_app)  # 退出
 
         self.ui.skuBox.addItems(['H7130', 'H7131', 'H7143'])  # 下拉选择
@@ -43,13 +44,13 @@ class HandleMian(QWidget):
         self.ui.main_funBox.setChecked(True)  # 默认设置为主功能
 
     # 复选主功能
-    # def main_func(self, dbs, timeout):
+    # def main_func(self):
     #     try:
     #         com = self.ui.serialEdit.text()  # 串口
     #         self.ser = serial.Serial(com,
     #                                  # self.ser = serial.Serial('com8',
-    #                                  dbs,
-    #                                  timeout=timeout)
+    #                                  115200,
+    #                                  timeout=1)
     #         self.ui.resultBrowser.append("*********连接串口成功*********")
     #         self.ui.mucButton.setEnabled(False)
     #         self.ui.appButton.setEnabled(False)
@@ -62,9 +63,8 @@ class HandleMian(QWidget):
     #         self.ui.pushButton.clicked.connect(self.thread_recv)
 
     # 复选app添加设备
-    def add_device_func(self, dbs, timeout):
-        self.dbs = dbs
-        self.timeout = timeout
+    # def add_device_func(self, dbs, timeout):
+    def add_device_func(self):
         try:
             com = self.ui.serialEdit.text()  # 串口
             self.ser = serial.Serial(com,
@@ -81,10 +81,11 @@ class HandleMian(QWidget):
             # self.ui.pushButton.clicked.connect(self.thread_recv)  # 断言判断
             self.ui.pushButton.clicked.connect(self.thread_add_devices)  # appium启动配置
 
+
+
     # 复选app绑定温湿度计
-    def add_temp_func(self, dbs, timeout):
-        self.dbs = dbs
-        self.timeout = timeout
+    def add_temp_func(self):
+
         try:
             com = self.ui.serialEdit.text()  # 串口
             self.ser = serial.Serial(com,
@@ -143,7 +144,7 @@ class HandleMian(QWidget):
     # app绑定温湿度计
     def thread_add_temp(self):
         try:
-            self.add_temp_thread = threading.Thread(target=add_temp)
+            self.add_temp_thread = threading.Thread(target=AppTest.add_devices)
             self.add_temp_thread.start()
         except Exception as e:
             print("无法启动线程:{}".format(e))
@@ -157,8 +158,8 @@ class HandleMian(QWidget):
             print("无法启动线程:{}".format(e))
 
 
-app = QApplication([])
-app.setWindowIcon(QIcon("config/touxiang.ico"))
-program = HandleMian()
-program.ui.show()
-app.exec_()
+# app = QApplication([])
+# app.setWindowIcon(QIcon("config/touxiang.ico"))
+# program = HandleMian()
+# program.ui.show()
+# app.exec_()
