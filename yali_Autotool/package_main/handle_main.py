@@ -7,14 +7,10 @@
 import datetime
 import threading
 import time
-from PySide2.QtWidgets import QWidget, QApplication
 from PySide2.QtUiTools import QUiLoader
-import sys
-from PySide2.QtGui import QIcon
-from PySide2.QtWidgets import QWidget, QApplication
-from appium import webdriver
-import serial
+from PySide2.QtWidgets import QWidget
 
+import serial
 
 from yali_Autotool.package_page.handle_page import AppTest
 
@@ -36,12 +32,17 @@ class HandleMian(QWidget):
         self.ui.setMaximumSize(600, 700)
         # self.ui.main_funBox.clicked.connect(self.main_func)  # 复选助主功能功能
         self.ui.add_deviceBox.clicked.connect(self.add_device_func)  # 复选绑定温湿度计功能
+        self.ui.add_tempBox.clicked.connect(self.add_temp_func)  # 复选绑定温湿度计功能
         # self.ui.quitButton.clicked.connect(self.quit_app)  # 退出
 
         self.ui.skuBox.addItems(['H7130', 'H7131', 'H7143'])  # 下拉选择
 
         # 默认设置
         self.ui.main_funBox.setChecked(True)  # 默认设置为主功能
+
+    # def go_thread(self):
+    #     thread = threading.Thread(target=self.go)
+    #     thread.start()
 
     # 复选主功能
     # def main_func(self):
@@ -81,8 +82,6 @@ class HandleMian(QWidget):
             # self.ui.pushButton.clicked.connect(self.thread_recv)  # 断言判断
             self.ui.pushButton.clicked.connect(self.thread_add_devices)  # appium启动配置
 
-
-
     # 复选app绑定温湿度计
     def add_temp_func(self):
 
@@ -99,7 +98,7 @@ class HandleMian(QWidget):
             # self.ui.mcuBox.setEnabled(True)
             self.err = -1
         if self.ui.add_tempBox.isChecked():
-            self.ui.pushButton.clicked.connect(self.thread_recv)  # 断言判断
+            # self.ui.pushButton.clicked.connect(self.thread_recv)  # 断言判断
             self.ui.pushButton.clicked.connect(self.thread_add_temp)  # appium启动配置
 
     # 处理串口数据，接收串口返回数据
@@ -135,16 +134,18 @@ class HandleMian(QWidget):
 
     # app添加设备
     def thread_add_devices(self):
+        apptest = AppTest()
         try:
-            self.add_devices_thread = threading.Thread(target=AppTest.add_devices)
+            self.add_devices_thread = threading.Thread(target=apptest.add_devices)
             self.add_devices_thread.start()
         except Exception as e:
             print("无法启动线程:{}".format(e))
 
     # app绑定温湿度计
     def thread_add_temp(self):
+        apptest = AppTest()
         try:
-            self.add_temp_thread = threading.Thread(target=AppTest.add_devices)
+            self.add_temp_thread = threading.Thread(target=apptest.add_temp)
             self.add_temp_thread.start()
         except Exception as e:
             print("无法启动线程:{}".format(e))
@@ -156,10 +157,3 @@ class HandleMian(QWidget):
             self.recv_thread.start()
         except Exception as e:
             print("无法启动线程:{}".format(e))
-
-
-# app = QApplication([])
-# app.setWindowIcon(QIcon("config/touxiang.ico"))
-# program = HandleMian()
-# program.ui.show()
-# app.exec_()

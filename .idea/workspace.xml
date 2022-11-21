@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fab08ede-30be-4ed2-b397-511281839135" name="Changes" comment="提交">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
+    <list default="true" id="b3b28839-5dd1-459a-b902-7ab4cbb2cc40" name="Changes" comment="代码提交">
+      <change afterPath="$PROJECT_DIR$/yali_Autotool/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoveeProject/package_app/H7131_AutoApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoveeProject/package_app/H7131_AutoApp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoveeProject/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoveeProject/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yali_Autotool/config/Skutest.ui" beforeDir="false" afterPath="$PROJECT_DIR$/yali_Autotool/Skutest.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yali_Autotool/package_common/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/yali_Autotool/package_common/common.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yali_Autotool/package_main/handle_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/yali_Autotool/package_main/handle_main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yali_Autotool/package_page/handle_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/yali_Autotool/package_page/handle_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yali_Autotool/run.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,12 +22,15 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2HqeLDkM5IzllVaEabDyujiFuaE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -40,7 +39,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/wys/AutoTestProjects&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/GoveeAutotest&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -167,7 +166,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fab08ede-30be-4ed2-b397-511281839135" name="Changes" comment="" />
+      <changelist id="b3b28839-5dd1-459a-b902-7ab4cbb2cc40" name="Changes" comment="代码提交" />
       <created>1669016986575</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -189,16 +188,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="提交" />
     <option name="LAST_COMMIT_MESSAGE" value="提交" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/yali_Autotool/package_main/handle_main.py</url>
-          <line>43</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
